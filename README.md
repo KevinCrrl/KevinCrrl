@@ -25,7 +25,7 @@ Además de manejar algo clásico y fácil como Windows, he tenido experiencias c
 
 Con Kali Linux he logrado dominar varios conocimientos sobre Red Team y algo de Blue Team usando actualmente Kali Linux Purple:
 
-- Nmap: Escaneos completos de red o a un objetivo específico, detecció de vulnerabilidades con el script vuln.
+- Nmap: Escaneos completos de red o a un objetivo específico, detección de vulnerabilidades con el script vuln.
 - Metasploit: He obtenido acceso a dispositivos vulnerables (dispositivos propios obviamente) y he descubierto como funcionan los malware más a fondo.
 - Wireshark: Con esta herramienta he logrado interceptar tráfico de red que circula por una red en texto plano (http) todo esto con conexiones propias y sin afectar otros dispositivos.
 - ARP Spoofing: Usando herramientas como EvilLimiter he logrado quitar el Internet a dispositivos debido al envío masivo de paquetes.
