@@ -4,10 +4,12 @@
 
 Además de manejar algo clásico y fácil como Windows, he tenido experiencias con múltiples distros de Linux en diferentes entornos:
 
-- Máquina virtual de Kali Linux, Debian y Arch Linux. Actualmente solo trabajo en las máquinas virtuales de Kali y Arch.
+- Máquina virtual de Kali Linux, Debian y Arch Linux. Actualmente solo trabajo en las máquinas virtuales de Debian modificado con repositorios de Kali para tener un sistema ligero pero enfocado a la ciberseguridad.
 - Live USB de Kali Linux y MX Linux, aunque actualmente solo conservo la de MX.
 - WSL (Windows Subsystem for Linux), con Debian y Kali, aunque actualmente ya no lo uso porque no me parece flexible.
-- Termux y proot distro, en Termux descargué y configure entornos gráficos (xfce) para proot distros que tuve como Arch o Artix, actualmente solo uso Artix en proot distro debido a las limitaciones que tiene Arch en un entorno sin systemd.
+- Termux y proot distro, en Termux descargué y configure entornos gráficos (xfce) para proot distros que tuve como Arch o Artix, actualmente solo uso Arch en proot distro.
+
+Actualmente solo uso Arch Linux por problemas y el poco rendimiento que me da Windows, por ello preferí un sistema de mayor control.
 
  ## Lenguajes de programación
 
