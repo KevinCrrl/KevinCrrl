@@ -4,12 +4,12 @@
 
 Además de manejar algo clásico y fácil como Windows, he tenido experiencias con múltiples distros de Linux en diferentes entornos:
 
-- Máquina virtual de Kali Linux, Debian y Arch Linux. Actualmente solo trabajo en las máquinas virtuales de Debian modificado con repositorios de Kali para tener un sistema ligero pero enfocado a la ciberseguridad.
+- Máquina virtual de Kali Linux, Debian y Arch Linux. Actualmente solo trabajo en máquina virtual de Debian modificado con repositorios de Kali para tener un sistema ligero pero enfocado a la ciberseguridad.
 - Live USB de Kali Linux y MX Linux, aunque actualmente solo conservo la de MX.
 - WSL (Windows Subsystem for Linux), con Debian y Kali, aunque actualmente ya no lo uso porque no me parece flexible.
 - Termux y proot distro, en Termux descargué y configure entornos gráficos (xfce) para proot distros que tuve como Arch o Artix, actualmente solo uso Arch en proot distro.
 
-Actualmente solo uso Arch Linux por problemas y el poco rendimiento que me da Windows, por ello preferí un sistema de mayor control.
+Actualmente solo uso Arch Linux por problemas y el poco rendimiento que me da Windows, por ello preferí un sistema de mayor control y Windows lo uso pero en máquina virtual.
 
  ## Lenguajes de programación
 
@@ -32,3 +32,13 @@ Con Kali Linux he logrado dominar varios conocimientos sobre Red Team y algo de 
 - Wireshark: Con esta herramienta he logrado interceptar tráfico de red que circula por una red en texto plano (http) todo esto con conexiones propias y sin afectar otros dispositivos.
 - ARP Spoofing: Usando herramientas como EvilLimiter he logrado quitar el Internet a dispositivos debido al envío masivo de paquetes.
 - Bettercap: Para interceptar los sitios que visita un dispositivo de la red, todo dirigido a mi propio dispositivo, sin afectar a otros.
+
+## Proyectos
+
+Como parte de mis proyectos personales he subido un proyecto al AUR (Arch User Repository) llamado UASPL, su descrición está disponible en:
+
+https://github.com/KevinCrrl/UASPL
+
+Y dentro del AUR:
+
+https://aur.archlinux.org/packages/uaspl-bin
