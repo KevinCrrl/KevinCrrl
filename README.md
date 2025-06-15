@@ -9,13 +9,17 @@ Además de manejar algo clásico y fácil como Windows, he tenido experiencias c
 - WSL (Windows Subsystem for Linux), con Debian y Kali, aunque actualmente ya no lo uso porque no me parece flexible.
 - Termux y proot distro, en Termux descargué y configure entornos gráficos (xfce) para proot distros que tuve como Arch o Artix, actualmente solo uso Arch en proot distro.
 
-Actualmente solo uso Arch Linux por problemas y el poco rendimiento que me da Windows, por ello preferí un sistema de mayor control y Windows lo uso pero en máquina virtual.
+Actualmente solo uso Arch Linux por problemas y el poco rendimiento que me da Windows, por ello preferí un sistema de mayor control y Windows lo uso solo cuando sea necesario en una máquina virtual.
 
  ## Lenguajes de programación
 
  - Python: Además de lo básico como funciones, estructuras de repetición, manejo librerías como customtkinter, json, os y subprocess y pyinstaller para compilar a archivos ejecutables.
  - Java: Aunque no sepa mucho, sé lo básico como pedir entradas de usuario con Scanner, hacer cálculos pequeños y condicionales.
  - C: Lo mismo que Java sé muy poco de C, pero es un lenguaje de bajo nivel, y es eso lo que me motiva a aprenderlo, a diferencia de Python o Java que son más orientado al software de alto nivel.
+
+## Logros, Insignias y/o certificaciones
+
+- Insignia del curso Python Essentials I de Cisco: Visible y verificable en https://www.credly.com/badges/899392c2-1631-4fa9-b3e5-535f0dfec9f4/public_url
 
 ## Manejo de editores de código:
 
@@ -42,3 +46,11 @@ https://github.com/KevinCrrl/UASPL
 Y dentro del AUR:
 
 https://aur.archlinux.org/packages/uaspl-bin
+
+También tengo el proyecto KPA (KevinCrrl Python AUR helper) disponible en:
+
+https://github.com/KevinCrrl/kpa
+
+y dentro del AUR:
+
+https://aur.archlinux.org/packages/kpa-bin
