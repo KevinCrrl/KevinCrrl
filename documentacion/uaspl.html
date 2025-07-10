@@ -8,7 +8,7 @@
 <body>
     <h1>UASPL</h1>
 
-    <p>UASPL (UASPL Automatizado para la Seguridad y Protección de Linux) es un programa que ayuda a automatizar la seguridad de sistemas Linux a través de los programas ClamAV, UFW, rkhunter, systemd y sudo, todo esto a través de una interfaz de consola y un modo gráfico hecho en Python.
+    <p>UASPL (Utilidad Automatizada para la Seguridad y Protección de Linux) es un programa que ayuda a automatizar la seguridad de sistemas Linux a través de los programas ClamAV, UFW, rkhunter, systemd y sudo, todo esto a través de una interfaz de consola y un modo gráfico hecho en Python.
         <br>
         <br>
         Este programa está disponible en el <a href="https://aur.archlinux.org/uaspl-bin">AUR</a> bajo la licencia GPLv3.</p>
@@ -59,8 +59,12 @@
     $ uaspl gui-mode
     </pre>
 
-    <p>Sin embargo tenga en cuenta que el modo-gui o gui-mode solo sirve para tener botones a la mano que evitan tener que escribir múltiples comandos pero la interfaz de consola seguirá siendo necesaria para ver la salida de dichos comandos. Además si ha configurado un idioma para uaspl, esto solo será aplicado al programa uaspl mas no será aplicado a las salidas de los programas externos que sirven como dependencias como ClamAV o rkhunter, ya que estos 
-        manejan su propio código y salidas en su idioma específico (Normalmente en inglés). Así como estos UASPL tiene otros comandos que están explicados y definidos dentro de su código fuente o en forma de advertencia cuando no se usa correctamente la herramienta.</p>
+    <p>
+        Sin embargo tenga en cuenta que el modo-gui o gui-mode solo sirve para tener botones a la mano que evitan tener que escribir múltiples comandos pero la interfaz de consola seguirá siendo necesaria para ver la salida de dichos comandos, 
+        la única interfaz que muestra la salida de un comando es la de UFW Status, a partir de la versi que muestra las reglas de firewall en una ventana, se está trabajando para que muchos más comandos se puedan ver en una interfaz. Además si ha 
+        configurado un idioma para uaspl, esto solo será aplicado al programa uaspl mas no será aplicado a las salidas de los programas externos que sirven como dependencias como ClamAV o rkhunter, ya que estos manejan su propio código y salidas en 
+        su idioma específico (Normalmente en inglés). Así como estos UASPL tiene otros comandos que están explicados y definidos dentro de su código fuente o en forma de advertencia cuando no se usa correctamente la herramienta.
+    </p>
     <br>
     <a href="/KevinCrrl/index.html">Volver a Inicio</a>
 </body>
