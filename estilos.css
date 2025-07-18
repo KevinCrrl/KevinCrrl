@@ -34,3 +34,7 @@ pre {
     color: chartreuse;
     font-size: 14px;
 }
+
+li {
+    color: rgb(221, 218, 218);
+}
