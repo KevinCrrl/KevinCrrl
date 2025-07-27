@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>UASPL</title>
+    <link rel="stylesheet" href="/KevinCrrl/estilos.css">
+</head>
+<body>
+    <h1>UASPL</h1>
+
+    <p>UASPL (Utilidad Automatizada para la Seguridad y Protección de Linux) es un programa que ayuda a automatizar la seguridad de sistemas Linux a través de los programas ClamAV, UFW, rkhunter, systemd y sudo, todo esto a través de una interfaz de consola y un modo gráfico hecho en Python.
+        <br>
+        <br>
+        Este programa está disponible en el <a href="https://aur.archlinux.org/uaspl-bin">AUR</a> bajo la licencia GPLv3.</p>
+
+    <p>Las siguientes configuraciones estarán dirigidas a la versión 1.2.0 en adelante de uaspl-bin, la versión 1.1.1 no tiene soporte de rutas xdg y tiene errores de interfaz mientras que la versión 1.0.0 no tiene disponibles estas funciones de idioma, entre otras que se hablarán aquí.</p>
+    <h2>Configuración de Idioma</h2>
+
+    <p>UASPL tiene soporte para español e inglés, por defecto usa el español y se puede comprobar a través de este mensaje cuando se intenta hacer uso de la herramienta:</p>
+
+    <pre>
+    No se cargó ningún idioma, se usará español por defecto, para cambiar el idioma o dejar de ver este mensaje, cree el archivo config.json de acuerdo a las instrucciones dadas en https://KevinCrrl.github.io/KevinCrrl/documentacion/uaspl.html
+    No language loaded, Spanish will be used by default, to change the language or stop seeing this message, create the config.json file according to the instructions given at https://KevinCrrl.github.io/KevinCrrl//uaspl.html
+    </pre>
+
+    <p>Para poner español o inglés como el idioma por defecto cree la carpeta <code>uaspl</code> en tu carpeta .config, tenga en cuenta que UASPL ahora usa rutas XDG, por ende no es obligatorio que .config esté en la carpeta de usuario (~), dentro de .config/uaspl cree el archivo config.json con el siguiente contenido:</p>
+
+    <pre>
+    {
+        "idioma": idioma
+    }
+    </pre>
+
+    <p>Advertencia: la primera parte ("idioma") debe quedarse tal como es, ya que esa es la parte que lee uaspl la segunda parte que está escrita sin comillas (idioma), es donde va una de las dos opciones de idioma ya sea espanol o english, escriba el nombre del idioma tal y como está aquí presentado (espanol o english) ya que si se escribe mal como español o inglés, uaspl no lo reconocerá, tampoco use idiomas no soportados como frances o portugues.</p>
+
+    <h2>Uso de UASPL</h2>
+
+    <p>Para usar este programa una vez esté instalado junto a sus dependencias (No requiere tener python ya que el programa viene compilado usando PyInstaller) se debe recurrir a la terminal donde existen unos cuantos comandos para usarlo e incluso activar su interfaz gráfica. Tenga en cuenta que los argumentos varian de acuerdo al idioma seleccionado en config.json, así que preste atención a las indicaciones que se dan a continuación para ambos idiomas.
+    </p>
+    <p>
+    Por ejemplo para activar los daemons de ClamAV se debe usar el comando:
+    </p>
+
+    <pre>
+    # Comando para configuración de idioma español
+    $ uaspl activar
+
+    # Comando para configuración de idioma inglés
+    $ uaspl activate
+    </pre>
+
+    <p>Mientras que para usar la interfaz gráfica:</p>
+
+    <pre>
+    # Comando para configuración de idioma español
+    $ uaspl modo-gui
+
+    # Comando para configuración de idioma inglés
+    $ uaspl gui-mode
+    </pre>
+
+    <p>
+        Sin embargo tenga en cuenta que el modo-gui o gui-mode solo sirve para tener botones a la mano que evitan tener que escribir múltiples comandos pero la interfaz de consola seguirá siendo necesaria para ver la salida de dichos comandos, 
+        la única interfaz que muestra la salida de un comando es la de UFW Status, a partir de la versi que muestra las reglas de firewall en una ventana, se está trabajando para que muchos más comandos se puedan ver en una interfaz. Además si ha 
+        configurado un idioma para uaspl, esto solo será aplicado al programa uaspl mas no será aplicado a las salidas de los programas externos que sirven como dependencias como ClamAV o rkhunter, ya que estos manejan su propio código y salidas en 
+        su idioma específico (Normalmente en inglés). Así como estos UASPL tiene otros comandos que están explicados y definidos dentro de su código fuente o en forma de advertencia cuando no se usa correctamente la herramienta.
+    </p>
+    <br>
+    <a href="/KevinCrrl/index.html">Volver a Inicio</a>
+</body>
+</html>

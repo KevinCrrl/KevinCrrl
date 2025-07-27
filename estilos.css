@@ -1,0 +1,40 @@
+body {
+    font-family: 'FiraCode Nerd Font', 'Liberation Sans', Arial, sans-serif;
+    background-color : rgb(15, 2, 36);
+    margin: 50px;
+}
+
+h1 {
+    font-size: 60px;
+    color: rgb(98, 224, 247);
+}
+
+h2 {
+    font-size: 30px;
+    color: rgb(71, 215, 121);
+}
+
+h3 {
+    font-size: 25px;
+    color: rgb(35, 236, 78);
+}
+
+p {
+    font-size: 16px;
+    text-align: justify;
+    color: rgb(221, 218, 218);
+    line-height: 1.6;
+}
+
+a {
+    color: rgb(70, 214, 240)
+}
+
+pre {
+    color: chartreuse;
+    font-size: 14px;
+}
+
+li {
+    color: rgb(221, 218, 218);
+}
