@@ -25,24 +25,30 @@
     <h2>Diferencias de este AUR helper</h2>
     <p>
         kpa automatiza y muestra las salidas de las herramientas propias de Arch, el entorno Linux y el control de versiones.
-
+        <br>
 - Tiene varios comandos simples:
-
+<br>
 -I: Instalar
+<br>
 -A: Actualizar
+<br>
 -D: Desinstalar
+<br>
 -C: Consultar información en un navegador
+<br>
 -R: Reinstalar
+<br>
 -M: Múltiples paquetes
+<br>
 
 Puede ejecutar kpa -h para obtener más información.
-
+<br>
 - Confirmación del usuario: Antes de usar makepkg, se le muestra al usuario el PKGBUILD para que lo pueda leer y decidir dentro de la interfaz de consola del programa si quiere continuar o cancelar.
-
+<br>
 - Python puro: kpa sigue una filosofía minimalista, por ello no usa bases de datos del AUR, controles de versiones innecesarios o configuraciones que no tienen que ver con la libertad con el usuario, kpa solo sigue su objetivo de automatizar y ser útil, por ello usa sus propias carpetas para almacenar los repositorios del AUR clonados, para poder recorrerlos en actualizaciones, verificar su existencia y comparar PKGBUILDs, además de su propia forma de configuración liviana en JSON para darle libertad al usuario sobre como quiere usar su AUR helper sin comprometer peso o portabilidad del programa.
-
+<br>
 - Sin tantas dependencias: kpa depende de las librerías propias de Python y de unas cuantas externas, lo cual no debe ser un gran peso, ya que Python viene instalado en la mayorpia de sistemas Linux, y las librerías externas se pueden instalar en un entorno virtual vía pip, además se usa solo lo suficiente para la construcción de paquetes del AUR, o sea, Git y makepkg que según la <a href="https://wiki.archlinux.org/title/Makepkg_(Espa%C3%B1ol)">wiki</a> de Arch ya viene por defecto en el paquete Pacman. Además si se descarga la versión ya compilada desde la zona de releases en GitHub o desde el AUR, no se necesitará tener ni Python ni las demás librerías.
-
+<br>
 - Torsocks: Use opcionalmente torsocks para clonar desde el AUR de manera anónima, se puede activar o desactivar en kpa.json usando valores 'true' o 'false'
     </p>
     <br>
