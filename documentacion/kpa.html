@@ -47,34 +47,48 @@ Puede ejecutar kpa -h para obtener más información.
     </p>
     <br>
     <h2>Instalación o compilación</h2>
-    <p>Para instalar KPA debemos tener su ejecutable o archivo .py, la opción más fácil es clonar el repositorio del AUR que instala el paquete ya compilado, si desea compilar KPA puede clonar el repositorio de GitHub y seguir los pasos descritos más abajo.
-        <br>
-        Para usar el ejecutable desde el AUR, clone el repositorio:
-        <code>git clone https://aur.archlinux.org/kpa-bin.git</code>
-        Luego dento de la carpete kpa-bin se recomienda que revise el PKGBUILD, puede usar cat para ello:
-        <code>cat PKGBUILD</code>
-        Para terminar construya el paquete:
-        <code>makepkg -si</code>
-        Siga las indicaciones de makepkg y acepte la instalación si está de acuerdo, ahora bien para verificar que todo haya salido bien, reinstale KPA para poder recibir actualizaciones automáticas del mismo usando:
-        <code>kpa -I kpa-bin</code>
-        Si KPA responde significa que la instalación fue correcta, sino revise si faltó algún comando o si algo dió error anteriormente.
-        <br>
-        Ahora si desea compilar desde el código fuente, clone el repositorio de GitHub:
-        <code>git clone https://github.com/KevinCrrl/kpa.git</code>
-        Luego cree un entorno virtual de Python usando:
-        <code>python -m venv ./nombre_del_entorno</code>
-        Recuerde que para usar entornos virtuales debe tener instalado, además del lenguaje Python, python-pip, ejecute esto si aún no los tiene instalados:
-        <code># pacman -S python python-pip</code>
-        Luego acceda al entorno:
-        <code>source ./nombre_del_entorno/bin/activate</code>
-        Ahora instale las libreías no estándar con pip:
-        <code>pip install -r requirements.txt</code>
-        Esto instalará lo necesario: colorama, pyxdg y jsonschema, además también instalará el compilador pyinstaller, para compilar use:
-        <code>pyinstaller --onefile kpa.py</code>
-        Esto generará un ejecutable llamado kpa en la carpeta dist del proyecto, puede mover ese ejecutable a /usr/bin:
-        <code># mv dist/kpa /usr/bin/</code>
-        Y ejecutar <code>kpa -I kpa-bin</code> para ver si responde correctamente y además recibir actualizaciones automáticas.
-    </p>
+    <p>Para instalar KPA debemos tener su ejecutable o archivo .py. La opción más fácil es clonar el repositorio del AUR que instala el paquete ya compilado. Si desea compilar KPA, puede clonar el repositorio de GitHub y seguir los pasos descritos más abajo.</p>
+
+    <p>Para usar el ejecutable desde el AUR, clone el repositorio:</p>
+    <code>git clone https://aur.archlinux.org/kpa-bin.git</code>
+
+    <p>Luego dentro de la carpeta <code>kpa-bin</code> se recomienda que revise el <code>PKGBUILD</code>, puede usar <code>cat</code> para ello:</p>
+    <code>cat PKGBUILD</code>
+
+    <p>Para terminar, construya el paquete:</p>
+    <code>makepkg -si</code>
+
+    <p>Siga las indicaciones de <code>makepkg</code> y acepte la instalación si está de acuerdo. Ahora bien, para verificar que todo haya salido bien, reinstale KPA para poder recibir actualizaciones automáticas del mismo usando:</p>
+    <code>kpa -I kpa-bin</code>
+
+    <p>Si KPA responde significa que la instalación fue correcta, sino, revise si faltó algún comando o si algo dio error anteriormente.</p>
+
+    <p>Ahora, si desea compilar desde el código fuente, clone el repositorio de GitHub:</p>
+    <code>git clone https://github.com/KevinCrrl/kpa.git</code>
+
+    <p>Luego cree un entorno virtual de Python usando:</p>
+    <code>python -m venv ./nombre_del_entorno</code>
+
+    <p>Recuerde que para usar entornos virtuales debe tener instalado, además del lenguaje Python, <code>python-pip</code>. Ejecute esto si aún no los tiene instalados:</p>
+    <code># pacman -S python python-pip</code>
+
+    <p>Luego acceda al entorno:</p>
+    <code>source ./nombre_del_entorno/bin/activate</code>
+
+    <p>Ahora instale las librerías no estándar con pip:</p>
+    <code>pip install -r requirements.txt</code>
+
+    <p>Esto instalará lo necesario: <code>colorama</code>, <code>pyxdg</code> y <code>jsonschema</code>. Además, también instalará el compilador <code>pyinstaller</code>. Para compilar, use:</p>
+    <code>pyinstaller --onefile kpa.py</code>
+
+    <p>Esto generará un ejecutable llamado <code>kpa</code> en la carpeta <code>dist</code> del proyecto. Puede mover ese ejecutable a <code>/usr/bin</code>:</p>
+    <code># mv dist/kpa /usr/bin/</code>
+
+    <p>Y ejecutar:</p>
+    <code>kpa -I kpa-bin</code>
+
+    <p>para ver si responde correctamente y además recibir actualizaciones automáticas.</p>
+
     <br>
     <p>
         IMPORTANTE: Los paquetes que instale con KPA se guardan en su carpeta .cache, específicamente en .cache/kpa, normalmente suele estar en su ruta de usuario "~", sin embargo dependiendo de como haya instalado y montado su sistema, puede estar en otro lugar, aún así, KPA usa XDG por ende puede encontrar tu carpeta .cache donde esté.
