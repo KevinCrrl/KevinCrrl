@@ -18,18 +18,18 @@
 
     <p>UASPL tiene soporte para español e inglés, por defecto usa el español y se puede comprobar a través de este mensaje cuando se intenta hacer uso de la herramienta:</p>
 
-    <pre>
+    <code>
     No se cargó ningún idioma, se usará español por defecto, para cambiar el idioma o dejar de ver este mensaje, cree el archivo config.json de acuerdo a las instrucciones dadas en https://KevinCrrl.github.io/KevinCrrl/documentacion/uaspl.html
     No language loaded, Spanish will be used by default, to change the language or stop seeing this message, create the config.json file according to the instructions given at https://KevinCrrl.github.io/KevinCrrl//uaspl.html
-    </pre>
+    </code>
 
     <p>Para poner español o inglés como el idioma por defecto cree la carpeta <code>uaspl</code> en tu carpeta .config, tenga en cuenta que UASPL ahora usa rutas XDG, por ende no es obligatorio que .config esté en la carpeta de usuario (~), dentro de .config/uaspl cree el archivo config.json con el siguiente contenido:</p>
 
-    <pre>
+    <code>
     {
         "idioma": idioma
     }
-    </pre>
+    </code>
 
     <p>Advertencia: la primera parte ("idioma") debe quedarse tal como es, ya que esa es la parte que lee uaspl la segunda parte que está escrita sin comillas (idioma), es donde va una de las dos opciones de idioma ya sea espanol o english, escriba el nombre del idioma tal y como está aquí presentado (espanol o english) ya que si se escribe mal como español o inglés, uaspl no lo reconocerá, tampoco use idiomas no soportados como frances o portugues.</p>
 
@@ -41,23 +41,23 @@
     Por ejemplo para activar los daemons de ClamAV se debe usar el comando:
     </p>
 
-    <pre>
+    <code>
     # Comando para configuración de idioma español
     $ uaspl activar
 
     # Comando para configuración de idioma inglés
     $ uaspl activate
-    </pre>
+    </code>
 
     <p>Mientras que para usar la interfaz gráfica:</p>
 
-    <pre>
+    <code>
     # Comando para configuración de idioma español
     $ uaspl modo-gui
 
     # Comando para configuración de idioma inglés
     $ uaspl gui-mode
-    </pre>
+    </code>
 
     <p>
         Sin embargo tenga en cuenta que el modo-gui o gui-mode solo sirve para tener botones a la mano que evitan tener que escribir múltiples comandos pero la interfaz de consola seguirá siendo necesaria para ver la salida de dichos comandos, 

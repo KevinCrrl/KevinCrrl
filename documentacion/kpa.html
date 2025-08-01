@@ -7,9 +7,119 @@
 </head>
 <body>
     <h1>KPA: Documentación</h1>
-    <p>La documentación de KPA está disponible en su repositorio en mi GitHub, la conservo ahí ya que está en dos idiomas, en diferentes archivos MarkDown, 
-        dejo <a href="https://github.com/KevinCrrl/kpa/blob/main/README.md">aquí</a> la documentación enlazada.
+    <p>
+        Este es un proyecto simple para automatizar la clonación de PKGBUILD y construcción a pertir de ellos usando el AUR (Arch User Repository), 
+        ya que la forma clásica de instalar paquetes desde el AUR es de manera manual, sin embargo ya que suele ser un proceso complejo, se crean estos programas, 
+        sin embargo, un helper puede ser riesgoso ya que ejecuta el PKGBUILD sin intervención humana, además que puede ocultar las salidas o incluso reemplazar herramientas clásicas, 
+        pues en los PKGBUILD pueden haber comandos maliciosos que se pueden ejecutar pidiendo permisos root al usuario, todo esto rompe la actividad clásica de usar las herramientas propias del sistema Arch Linux.
     </p>
+    <br>
+    <h2>Disponibilidad</h2>
+    <p>El código fuente de KPA se encuentra en <a href="https://github.com/KevinCrrl/kpa">GitHub</a>, está compilado para arquitecturas aarch64 y x86_64, disponibles en <a href="https://github.com/KevinCrrl/kpa/releases">releases</a> y se puede automatizar la instalación vía <a href="https://aur.archlinux.org/packages/kpa-bin">AUR</a></p>
+    <br>
+    <p>
+        Por cierto, esta documentación corresponde a la versión 1.3.0 de KPA (la más reciente), para ver la documentación de versiones anteriores, 
+        puede ver <a href="https://github.com/KevinCrrl/kpa/blob/main/README.md">la documentación</a> anterior e incluso en el historial de versiones para documentación más antigua. 
+    </p>
+    <br>
+    <h2>Diferencias de este AUR helper</h2>
+    <p>
+        kpa automatiza y muestra las salidas de las herramientas propias de Arch, el entorno Linux y el control de versiones.
+
+- Tiene varios comandos simples:
+
+-I: Instalar
+-A: Actualizar
+-D: Desinstalar
+-C: Consultar información en un navegador
+-R: Reinstalar
+-M: Múltiples paquetes
+
+Puede ejecutar kpa -h para obtener más información.
+
+- Confirmación del usuario: Antes de usar makepkg, se le muestra al usuario el PKGBUILD para que lo pueda leer y decidir dentro de la interfaz de consola del programa si quiere continuar o cancelar.
+
+- Python puro: kpa sigue una filosofía minimalista, por ello no usa bases de datos del AUR, controles de versiones innecesarios o configuraciones que no tienen que ver con la libertad con el usuario, kpa solo sigue su objetivo de automatizar y ser útil, por ello usa sus propias carpetas para almacenar los repositorios del AUR clonados, para poder recorrerlos en actualizaciones, verificar su existencia y comparar PKGBUILDs, además de su propia forma de configuración liviana en JSON para darle libertad al usuario sobre como quiere usar su AUR helper sin comprometer peso o portabilidad del programa.
+
+- Sin tantas dependencias: kpa depende de las librerías propias de Python y de unas cuantas externas, lo cual no debe ser un gran peso, ya que Python viene instalado en la mayorpia de sistemas Linux, y las librerías externas se pueden instalar en un entorno virtual vía pip, además se usa solo lo suficiente para la construcción de paquetes del AUR, o sea, Git y makepkg que según la <a href="https://wiki.archlinux.org/title/Makepkg_(Espa%C3%B1ol)">wiki</a> de Arch ya viene por defecto en el paquete Pacman. Además si se descarga la versión ya compilada desde la zona de releases en GitHub o desde el AUR, no se necesitará tener ni Python ni las demás librerías.
+
+- Torsocks: Use opcionalmente torsocks para clonar desde el AUR de manera anónima, se puede activar o desactivar en kpa.json usando valores 'true' o 'false'
+    </p>
+    <br>
+    <h2>Instalación o compilación</h2>
+    <p>Para instalar KPA debemos tener su ejecutable o archivo .py, la opción más fácil es clonar el repositorio del AUR que instala el paquete ya compilado, si desea compilar KPA puede clonar el repositorio de GitHub y seguir los pasos descritos más abajo.
+        <br>
+        Para usar el ejecutable desde el AUR, clone el repositorio:
+        <code>git clone https://aur.archlinux.org/kpa-bin.git</code>
+        Luego dento de la carpete kpa-bin se recomienda que revise el PKGBUILD, puede usar cat para ello:
+        <code>cat PKGBUILD</code>
+        Para terminar construya el paquete:
+        <code>makepkg -si</code>
+        Siga las indicaciones de makepkg y acepte la instalación si está de acuerdo, ahora bien para verificar que todo haya salido bien, reinstale KPA para poder recibir actualizaciones automáticas del mismo usando:
+        <code>kpa -I kpa-bin</code>
+        Si KPA responde significa que la instalación fue correcta, sino revise si faltó algún comando o si algo dió error anteriormente.
+        <br>
+        Ahora si desea compilar desde el código fuente, clone el repositorio de GitHub:
+        <code>git clone https://github.com/KevinCrrl/kpa.git</code>
+        Luego cree un entorno virtual de Python usando:
+        <code>python -m venv ./nombre_del_entorno</code>
+        Recuerde que para usar entornos virtuales debe tener instalado, además del lenguaje Python, python-pip, ejecute esto si aún no los tiene instalados:
+        <code># pacman -S python python-pip</code>
+        Luego acceda al entorno:
+        <code>source ./nombre_del_entorno/bin/activate</code>
+        Ahora instale las libreías no estándar con pip:
+        <code>pip install -r requirements.txt</code>
+        Esto instalará lo necesario: colorama, pyxdg y jsonschema, además también instalará el compilador pyinstaller, para compilar use:
+        <code>pyinstaller --onefile kpa.py</code>
+        Esto generará un ejecutable llamado kpa en la carpeta dist del proyecto, puede mover ese ejecutable a /usr/bin:
+        <code># mv dist/kpa /usr/bin/</code>
+        Y ejecutar <code>kpa -I kpa-bin</code> para ver si responde correctamente y además recibir actualizaciones automáticas.
+    </p>
+    <br>
+    <p>
+        IMPORTANTE: Los paquetes que instale con KPA se guardan en su carpeta .cache, específicamente en .cache/kpa, normalmente suele estar en su ruta de usuario "~", sin embargo dependiendo de como haya instalado y montado su sistema, puede estar en otro lugar, aún así, KPA usa XDG por ende puede encontrar tu carpeta .cache donde esté.
+    </p>
+    <br>
+    <h2>El parámetro -M</h2>
+    <p>
+        permite usar las funciones instalar, desinstalar, actualizar o reinstalar con múltiples paquetes, en este ejemplo se puede ver como se usa con la función actualizar:
+    </p>
+    <br>
+    <code>
+        $ kpa -M actualizar
+        Ruta de KPA encontrada...
+
+        Ingresa los paquetes a los que quieras aplicar la función seleccionada, ingresa separando solo con espacios entre nombres de paquetes, no separe con guiones o comas.
+        Nombre de los paquetes: paquete1 paquete2 paquete3
+    </code>
+    <br>
+    <p>
+        Como se puede ver una vez se llama a la función actualizar con el -M, se pide más abajo el nombre de los paquetes a los cuales se les va a ejecutar la función, en este caso la función actualizar.
+    </p>
+    <br>
+    <h2>Ejemplo de kpa.json</h2>
+    <p>
+        Este archivo permite a KPA saber que programas externos usar o como se debe comportar, todo con el fin de mejorar la experiencia del usuario y no limitar a que todo el que use KPA sea obligado a usarlo como lo usan los demás, 
+        para que no existan problemas en caso de que un usuario no cree el archivo, KPA incluye una configuración interna que se usa hasta que exista el archivo de configuración.
+        <br>
+        Tenga en cuenta que si crea este archivo de configuración debe definir todas las variables, pues una vez se crea el archivo KPA no usa más las variables que tenía por defecto, y si una variable no está definida en el JSON se producirá un error.
+        A continuación, se explica para que se usan cada una de las variables en el archivo kpa.json en caso de que quiera personalizar la experiencia:
+        <br>
+        <ul>
+            <li>visor: Esta variable se usa para ver y/o editar los PKGBUILDs, por defecto usa la variable "kpa", ese valor significa que se usará el visor incorporado en KPA, es un visor muy simple, se puede ver su funcionamiento en <a href="https://github.com/KevinCrrl/kpa/blob/main/utlds/funciones.py">la función</a> <code>visor()</code> en el código de KPA, 
+            comprendiendo entonces lo pequeño que es este visor, el usuario puede dejarlo usando la variable "kpa" nuevamente en su archivo de configuración, sin embargo puede usar otros visores como cat o bat, y hasta editores como nano o Vim.</li>
+            <li>torsocks: Se usa para definir si KPA va a clonar un repositorio del AUR usando la red TOR, esto es para usuarios que quieran no ser identificados aún así el AUR sea un lugar gestionado por la comunidad de archlinux y no por alguna corporación, aún así, en el mundo del software libre se valora mucho que un programa permita conexión por TOR, 
+            la variable torsocks usa un valor booleano, no una string, en JSON los booleanos se ponen en minúscula (true o false), luego través de la libreía JSON los convierte a booleanos de Python con inicial en mayúscula (True o False), de esta manera, no debe preocuparse de eso, simplemente si quiere usar TOR (que obviamente requiere que su sistema tenga instalado tor y torsocks), 
+            use el valor true para su archivo de configuración, si no lo desea simplemente use false (por defecto se usa false, pero aún así para evitar errores debe declarar la variable en el JSON)</li>
+            <li>navegador: Ya se mencionó que KPA permite consultar paquetes en el AUR web usando la función <a href="https://github.com/KevinCrrl/kpa/blob/main/utlds/funciones.py"><code>consultar()</code></a> para ello, se requiere un navegador, así que para que el usuario pueda usar su navegador de preferencia se crea esta variable, por defecto viene con el valor "firefox" que es uno de los más usados en Linux, pero no es obigatorio, pues gracias a esta variable se puede cambiar.</li>
+            <li>root: Permite personalizar con que programa el usuario quiere ejecutar acciones que requieren permisos root, por ejemplo, puede usar sudo, doas o incluso pkexec, por defecto la variable se define en "sudo".</li>
+        </ul>
+    </p>
+    <br>
+    <h3>Ejemplo de kpa.json</h3>
+    <div style="text-align: center;">
+        <img src="/KevinCrrl/assets/json.png" alt="Ejemplo de kpa.json">
+    </div>
     <br>
     <a href="/KevinCrrl/index.html">Volver a Inicio</a>
 </body>
