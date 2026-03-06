@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://kevincrrl.github.io/KevinCrrl/</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://kevincrrl.github.io/KevinCrrl/documentacion/kpa.html</loc>
+    <lastmod>2025-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://kevincrrl.github.io/KevinCrrl/documentacion/uaspl.html</loc>
+    <lastmod>2025-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://kevincrrl.github.io/KevinCrrl/documentacion/pkgbuild_parser.html</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://kevincrrl.github.io/KevinCrrl/documentacion/kpa/instalacion_y_compilacion.html</loc>
+    <lastmod>2025-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>

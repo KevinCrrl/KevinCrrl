@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>KPA</title>
+    <link rel="stylesheet" href="/KevinCrrl/estilos.css">
+</head>
+<body>
+    <h1>Construcción e instalación</h1>
+    <p>Existen dos formas de contruir e instalar KPA: En un entorno virtual usando pip o como un paquete manejable con PacMan en un sistema de tipo Arch a través del AUR.</p>
+    <br>
+    <h2>Usando PIP</h2>
+    <p>Para instalar usando pip siga la guía en <a href="https://github.com/KevinCrrl/kpa#pasos-para-usar-en-desarrollo">el README del repositorio de KPA</a></p>
+    <br>
+    <h2>Usando el AUR</h2>
+    <p>Para instalar en un sistema usando PacMan y el AUR siga estos pasos usando makepkg:</p>
+    <br>
+    <p>KPA depende de python-pkgbuild-parser, un módulo disponible solo en Pypi y en el AUR, como se está realizando la instalación en el sistema se debe instalar este módulo desde el AUR primeramente:</p>
+    <code>git clone https://aur.archlinux.org/python-pkgbuild-parser.git && cd python-pkgbuild-parser</code>
+
+    <p>Luego dentro de la carpeta <code>python-pkgbuild-parser</code> se recomienda que revise el <code>PKGBUILD</code>, puede usar <code>cat</code> para ello:</p>
+    <code>cat PKGBUILD</code>
+
+    <p>Siga las indicaciones de <code>makepkg</code> y acepte la instalación si está de acuerdo. Ahora ya que se tiene python-pkgbuild-parser instalado, se puede instalar KPA sin errores volviendo al directorio anterior, clonando KPA desde el AUR y cambiar a la nueva carpeta:</p>
+    <code>cd .. && git clone https://aur.archlinux.org/kpa.git && cd kpa</code>
+
+    <p>Revise el PKGBUILD también para este paquete y construya con makepkg si todo parece correcto:</p>
+    <code>cat PKGBUILD</code>
+    <br>
+    <code>makepkg -si</code>
+
+    <p>Ahora bien, para verificar que todo haya salido bien, reinstale KPA para poder recibir actualizaciones automáticas del mismo usando:</p>
+    <code>kpa -I kpa</code>
+
+    <p>Si KPA responde significa que la instalación fue correcta, sino, se debe revisar si faltó algún comando o si algo causó error anteriormente.</p>
+    <br>
+    <a href="/KevinCrrl/index.html">Volver a Inicio</a>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>KPA</title>
+    <link rel="stylesheet" href="/KevinCrrl/estilos.css">
+</head>
+<body>
+    <h1>KPA: Documentación</h1>
+    <div class="aviso">KPA es un proyecto independiente usado en sistemas Arch Linux y derivados, sin embargo, ni KPA ni su creador tienen relaciones con Arch Linux ni con su nombre oficial.</div>
+    <p>
+        Este es un proyecto que busca la seguridad y el minimalismo para automatizar la clonación de PKGBUILD y construcción a partir de ellos usando el AUR (Arch User Repository), 
+        ya que la forma clásica de instalar paquetes desde el AUR es de manera manual, sin embargo, ya que suele ser un proceso complejo, se crean estos programas, 
+        desafortunadamente, un helper puede ser riesgoso ya que ejecuta el PKGBUILD sin intervención humana, además que puede ocultar procesos importantes o incluso reemplazar herramientas clásicas, 
+        pues en los PKGBUILD pueden haber comandos maliciosos que se pueden ejecutar pidiendo permisos root al usuario, todo esto rompe la actividad clásica de usar las herramientas propias del sistema Arch Linux.
+    </p>
+    <br>
+    <h2>Disponibilidad</h2>
+    <p>El código fuente de KPA se encuentra en <a href="https://github.com/KevinCrrl/kpa">GitHub</a>, está disponible como paquete python en versiones iguales y posteriores a 2.0.0 y para versiones anteriores a 2.0.0 está compilado para arquitecturas aarch64 y x86_64 con pyinstaller (disponibles en <a href="https://github.com/KevinCrrl/kpa/releases">releases</a>)
+         y se puede automatizar la instalación vía <a href="https://aur.archlinux.org/packages/kpa">kpa en AUR</a> (el paquete kpa-bin ya no será mantenido oficialmente).</p>
+    <br>
+    <p>
+        Por cierto, esta documentación corresponde a la versión 2.0.0 de KPA y superiores, para documentación de versiones anteriores puede ver el historial de este sitio en <a href="https://github.com/KevinCrrl/KevinCrrl/commits/main/">GitHub</a>.
+    </p>
+    <br>
+    <h2>Diferencias de este AUR helper</h2>
+    <p>
+        kpa automatiza las herramientas propias de Arch, el entorno Linux y el control de versiones.
+    <br>
+        - Tiene varios comandos simples:
+        <br>
+        -I: Instalar
+        <br>
+        -A: Actualizar
+        <br>
+        -D: Desinstalar (Usa `pacman -R`).
+        <br>
+        -R: Reinstalar
+        <br>
+        -L: Limpiar el sistema
+        <br>
+        <br>
+        De estos comandos -I y -A se pueden usar con --verbose para ver las salidas de Git (Solo a partir de la versión 2.2.0).
+        <br>
+        
+        Puede ejecutar kpa --help para obtener más información.
+        <br>
+        - Confirmación del usuario: Antes de usar makepkg, se le muestra al usuario el PKGBUILD para que lo pueda leer y decidir dentro de la interfaz de consola del programa si quiere continuar o cancelar, además por defecto tiene un detector de EULA que le advierte al usuario si un paquete lo contiene (ahora con una detección mejorada gracias a `pkgbuild-parser` que analiza el campo de licencia del PKGBUILD) (aunque se puede desactivar).
+        <br>
+        <br>
+        - Python puro: kpa sigue una filosofía minimalista, por ello no usa bases de datos del AUR, controles de versiones innecesarios o configuraciones que no tienen que ver con la libertad o personalización para el usuario, kpa solo sigue su objetivo de automatizar y ser útil, por ello usa sus propias carpetas para almacenar los repositorios del AUR clonados, para poder recorrerlos en actualizaciones, verificar su existencia y comparar PKGBUILDs de forma más robusta gracias a `pkgbuild-parser`, además de su propia forma de configuración liviana en JSON para darle libertad al usuario sobre como quiere usar su AUR helper sin comprometer peso o portabilidad del programa.
+        <br>
+        <br>
+        - Sin tantas dependencias: kpa depende de las librerías propias de Python y de unas cuantas externas, lo cual no debe ser un gran peso, ya que Python viene instalado en la mayoría de sistemas Linux, y las librerías externas se pueden instalar en un entorno virtual vía pip, además se usa solo lo suficiente para la construcción de paquetes del AUR, o sea, Git y makepkg que según la <a href="https://wiki.archlinux.org/title/Makepkg_(Espa%C3%B1ol)">wiki</a> de Arch ya viene por defecto en el paquete Pacman.<br>
+    <br>
+    </p>
+    <br>
+    <h2>Construcción e instalación</h2>
+    <p>Visite este <a href="/KevinCrrl/documentacion/kpa/construccion_e_instalacion.html">sitio</a> para construir e instalar KPA.</p>
+    <br>
+    <h2>El parámetro -L</h2>
+    <p>
+        Permite limpiar el sistema de paquetes innecesarios, actualmente soporta la limpieza de paquetes de depuración (debug) y paquetes huérfanos.
+    </p>
+    <br>
+    <pre>
+    <code>
+        $ kpa -L debug
+        # O
+        $ kpa -L huerfanos
+    </code>
+    </pre>
+    <br>
+    <p>
+        Al usar <code>-L debug</code>, KPA buscará paquetes instalados que contengan "debug" en su nombre y le preguntará si desea eliminarlos.
+        <br>
+        Al usar <code>-L huerfanos</code>, KPA buscará paquetes que fueron instalados como dependencias pero que ya no son requeridos por ningún paquete, y le preguntará si desea eliminarlos.
+    </p>
+    <br>
+    <h2>kpa.json</h2>
+    <div class="advertencia">La inclusión de proxychains en KPA ha sido retirada en la versión 2.2.0, para usar proxychains debe hacerlo por la línea de comandos, por ejemplo: <pre><code>$ proxychains kpa -I [PAQUETE]</code></pre></div>
+    <p>
+        Este archivo permite a KPA saber que programas externos usar o como se debe comportar, todo con el fin de mejorar la experiencia del usuario y no limitar a que todo el que use KPA sea obligado a usarlo como lo usan los demás, 
+        para que no existan problemas en caso de que un usuario no cree el archivo, KPA incluye una configuración interna que se usa tanto si no existe el archivo de configuración como cuando el usuario solo configura algunas cosas.
+        <br>
+        A partir de la versión 1.5.0, el usuario puede definir solo las variables que desee sin que se produzcan errores.
+        A continuación, se explica para que se usan cada una de las variables en el archivo kpa.json en caso de que quiera personalizar la experiencia:
+        <br>
+        El archivo se ubica en <code>$XDG_CONFIG_HOME/kpa/kpa.json</code> (normalmente <code>~/.config/kpa/kpa.json</code>).
+        <br>
+        <ul>
+            <li>visor: Esta variable se usa para ver y/o editar los PKGBUILDs, por defecto usa la variable "kpa", ese valor significa que se usará el visor incorporado en KPA, es un visor muy simple, se puede ver su funcionamiento en <a href="https://github.com/KevinCrrl/kpa/blob/main/kpa/funciones.py">la función</a> <code>visor()</code> en el código de KPA, 
+            comprendiendo entonces lo pequeño que es este visor, el usuario puede dejarlo usando la variable "kpa" nuevamente en su archivo de configuración, sin embargo puede usar otros visores como cat o bat, y hasta editores como nano o Vim.</li>
+            <br>
+            <li>root: Permite personalizar con que programa el usuario quiere ejecutar acciones que requieren permisos root, por ejemplo, puede usar sudo, doas o incluso pkexec, por defecto la variable se define en "sudo".</li>
+            <br>
+            <li>ignorar: Es una variable de tipo array, por ende se crea con dos corchetes [] y dentro de ella se incluyen los nombres de paquetes que se quieren ignorar durante una actualización, ya sea para paquetes congelados por estabilidad o que cuyos cambios serán aplicados por el mismo usuario. Si no quiere ignorar algún paquete deje los corchetes vacíos.</li>
+            <br>
+            <li>eula_detector: Se usa con un valor booleano (true/false) y permite activar o desactivar la detección de licencias EULA en la carpeta del proyecto clonado, la detección no es perfecta, pueden haber paquetes con EULA que no sean detectados o falsos positivos, por eso se recomienda revisar la carpeta del proyecto en caso de que se detcte EULA para verificar su existencia.</li>
+            <br>
+            <li>url: Aquí el usuario puede decirle a KPA que clone desde una URL diferente al AUR original, ya sea URLs de AURs con paquetes seleccionados o mirrors del AUR oficial, sin embargo, se recomienda usar la URL oficial siempre o mirrors oficiales como el de <a href="https://github.com/archlinux/aur">GitHub</a>, aún así, sin importar que URL use, es responsabilidad del usuario estar seguro de los paquetes que baja y usa, esto no es responsabilidad de nadie más, ni siquiera del creador de KPA.</li>
+            <br>
+            <li>clone_branch: Ciertas URLs como el mirror de GitHub de archlinux pueden requerir usar un comando especial para clonar, en este caso clone_branch que es una variable de tipo booleano (true o false) le dice a KPA si usar el comando <code>git clone --branch paquete --single-branch url_del_repo paquete</code> o clonar de manera normal.</li>
+        </ul>
+    </p>
+    <br>
+    <h3>Ejemplo</h3>
+    <div style="text-align: center;">
+        <img src="/KevinCrrl/assets/json.png" alt="Ejemplo de kpa.json">
+    </div>
+    <br>
+    <a href="/KevinCrrl/index.html">Volver a Inicio</a>
+</body>
+</html>

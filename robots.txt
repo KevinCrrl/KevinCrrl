@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://kevincrrl.github.io/KevinCrrl/sitemap.xml
