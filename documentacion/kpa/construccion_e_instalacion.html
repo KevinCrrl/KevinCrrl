@@ -20,6 +20,8 @@
 
     <p>Luego dentro de la carpeta <code>python-pkgbuild-parser</code> se recomienda que revise el <code>PKGBUILD</code>, puede usar <code>cat</code> para ello:</p>
     <code>cat PKGBUILD</code>
+    <br>
+    <code>makepkg -si</code>
 
     <p>Siga las indicaciones de <code>makepkg</code> y acepte la instalación si está de acuerdo. Ahora ya que se tiene python-pkgbuild-parser instalado, se puede instalar KPA sin errores volviendo al directorio anterior, clonando KPA desde el AUR y cambiar a la nueva carpeta:</p>
     <code>cd .. && git clone https://aur.archlinux.org/kpa.git && cd kpa</code>
@@ -29,8 +31,8 @@
     <br>
     <code>makepkg -si</code>
 
-    <p>Ahora bien, para verificar que todo haya salido bien, reinstale KPA para poder recibir actualizaciones automáticas del mismo usando:</p>
-    <code>kpa -I kpa</code>
+    <p>Ahora bien, para verificar que todo haya salido bien, reinstale el parser y KPA para poder recibir actualizaciones automáticas del mismo usando:</p>
+    <code>kpa -I python-pkgbuild-parser kpa</code>
 
     <p>Si KPA responde significa que la instalación fue correcta, sino, se debe revisar si faltó algún comando o si algo causó error anteriormente.</p>
     <br>
