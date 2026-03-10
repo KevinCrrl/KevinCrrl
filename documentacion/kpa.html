@@ -20,12 +20,12 @@
          y se puede automatizar la instalación vía <a href="https://aur.archlinux.org/packages/kpa">kpa en AUR</a> (el paquete kpa-bin ya no será mantenido oficialmente).</p>
     <br>
     <p>
-        Por cierto, esta documentación corresponde a la versión 2.0.0 de KPA y superiores.
+        Por cierto, esta documentación corresponde a la versión 2.3.0 de KPA y superiores.
     </p>
     <br>
     <h2>Diferencias de este AUR helper</h2>
     <p>
-        kpa automatiza las herramientas propias de Arch, el entorno Linux y el control de versiones.
+        kpa automatiza las herramientas propias de Arch, el entorno Linux y el control de versiones a diferencia de otros AUR Helper que se limitan a sus propias implementaciones y/o reemplazan programas y no ofrecen una mejor transparencia del proceso.
     <br>
         - Tiene varios comandos simples:
         <br>
@@ -38,6 +38,8 @@
         -R: Reinstalar
         <br>
         -L: Limpiar el sistema
+        <br>
+        -C: Configurar KPA mediante CLI y escribir esa configuración al archivo kpa.json
         <br>
         <br>
         De estos comandos -I y -A se pueden usar con --verbose para ver las salidas de Git (Solo a partir de la versión 2.2.0).
@@ -60,7 +62,7 @@
     <br>
     <h2>El parámetro -L</h2>
     <p>
-        Permite limpiar el sistema de paquetes innecesarios, actualmente soporta la limpieza de paquetes de depuración (debug) y paquetes huérfanos.
+        Permite limpiar el sistema de paquetes innecesarios, actualmente soporta la limpieza de paquetes de depuración (debug), paquetes huérfanos y caché de la carpeta de KPA.
     </p>
     <br>
     <pre>
@@ -68,6 +70,8 @@
         $ kpa -L debug
         # O
         $ kpa -L huerfanos
+        # O
+        $ kpa -L cache
     </code>
     </pre>
     <br>
@@ -75,6 +79,8 @@
         Al usar <code>-L debug</code>, KPA buscará paquetes instalados que contengan "debug" en su nombre y le preguntará si desea eliminarlos.
         <br>
         Al usar <code>-L huerfanos</code>, KPA buscará paquetes que fueron instalados como dependencias pero que ya no son requeridos por ningún paquete, y le preguntará si desea eliminarlos.
+        <br>
+        Al usar <code>-L cache</code>, KPA eliminará los residuos de archivos comprimidos y carpetas src y pkg de la carpeta donde KPA construye y almacena los PKGBUILD.
     </p>
     <br>
     <h2>kpa.json</h2>
