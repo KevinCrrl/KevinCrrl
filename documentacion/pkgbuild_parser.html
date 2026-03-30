@@ -16,8 +16,8 @@
         <strong>pkgbuild_parser</strong> es un módulo escrito en <strong>Python</strong> (compatible con Python 3.x) diseñado para extraer información de un <strong>PKGBUILD</strong>. El propósito principal de este módulo es proporcionar un acceso sencillo y directo a los campos más importantes de un PKGBUILD sin depender de herramientas externas ni librerías adicionales.
     </p>
     <ul>
-        <li><strong>Versión:</strong> 1.1.0</li>
-        <li><strong>Licencia:</strong> MIT 2025 KevinCrrl</li>
+        <li><strong>Versión:</strong> 1.2.0</li>
+        <li><strong>Licencia:</strong> MPL-2.0 2026 KevinCrrl</li>
         <li><strong>Dependencias:</strong> Ninguna</li>
         <li><strong>Estilo:</strong> Simplicidad, sin dependencias externas, fácil de usar</li>
     </ul>
@@ -221,7 +221,8 @@ except pkgbuild_parser.ParserKeyError as e:
     </p>
     <h2>Limitaciones y Notas Extra</h2>
     <ul>
-        <li>El objetivo del módulo es extraer únicamente <strong>información básica</strong> de PKGBUILD estándar, no puede reemplazar variables bash dentro de otra variable como por ejemplo si el source está declarado con el valor "$url/paquete.zip".</li>
+        <li>A partir de la versión 1.2.0, el parser puede reemplazar variables conocidas en un string de Bash. Por ejemplo, si intentas obtener un archivo fuente y está declarado en el PKGBUILD como "${url}/package-$pkgver.tar.gz", pkgbuild-parser podrá reconocer estas variables, recuperarlas y reemplazarlas por sus valores.</li>
+        <li>El objetivo del módulo es extraer únicamente <strong>información básica</strong> de PKGBUILD estándar. No puede reemplazar variables que no reconozca, como "$mi_variable_personal", o variaciones de variables conocidas, como "$pkgname%sufijo".</li>
         <li>Funciona mejor con PKGBUILD que siguen las normas de la <strong>Arch Wiki</strong>.</li>
         <li>Desde la versión 0.4.0, el módulo puede extraer información de arrays o listas, como <code>depends</code>, <code>makedepends</code>, <code>source</code>, <code>optdepends</code>, <code>license</code>, <code>options</code> y <code>checkdepends</code>.</li>
         <li>Desde la versión 1.0.0 las funciones que retornan un string, por defecto ya no incluyen las comillas</li>
