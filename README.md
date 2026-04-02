@@ -9,11 +9,11 @@ Más información sobre mí que no está en el sitio web:
 ## Actividad reciente
 
 <!--START_SECTION:activity-->
-1. 🎉 Merged PR [#4898](https://github.com/BlackArch/blackarch/pull/4898) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
-2. 💪 Opened PR [#4898](https://github.com/BlackArch/blackarch/pull/4898) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
-3. 🎉 Merged PR [#4894](https://github.com/BlackArch/blackarch/pull/4894) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
-4. 💪 Opened PR [#4894](https://github.com/BlackArch/blackarch/pull/4894) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
-5. 🎉 Merged PR [#4893](https://github.com/BlackArch/blackarch/pull/4893) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
+1. ℹ️ Labeled issue [#4](https://github.com/KevinCrrl/evillimiter-ng/issues/4) in [KevinCrrl/evillimiter-ng](https://github.com/KevinCrrl/evillimiter-ng)
+2. ℹ️ Labeled issue [#4](https://github.com/KevinCrrl/evillimiter-ng/issues/4) in [KevinCrrl/evillimiter-ng](https://github.com/KevinCrrl/evillimiter-ng)
+3. ❗ Opened issue [#4](https://github.com/KevinCrrl/evillimiter-ng/issues/4) in [KevinCrrl/evillimiter-ng](https://github.com/KevinCrrl/evillimiter-ng)
+4. 🎉 Merged PR [#4898](https://github.com/BlackArch/blackarch/pull/4898) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
+5. 💪 Opened PR [#4898](https://github.com/BlackArch/blackarch/pull/4898) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
 <!--END_SECTION:activity-->
 
 ## Actividad por días
