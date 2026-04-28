@@ -9,11 +9,11 @@ Más información sobre mí que no está en el sitio web:
 ## Actividad reciente
 
 <!--START_SECTION:activity-->
-1. 🔒 Closed issue [#7](https://github.com/KevinCrrl/evillimiter-ng/issues/7) in [KevinCrrl/evillimiter-ng](https://github.com/KevinCrrl/evillimiter-ng)
-2. 🗣 Commented on [#7](https://github.com/KevinCrrl/evillimiter-ng/issues/7#issuecomment-4331105625) in [KevinCrrl/evillimiter-ng](https://github.com/KevinCrrl/evillimiter-ng)
-3. 💪 Opened PR [#4925](https://github.com/BlackArch/blackarch/pull/4925) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
-4. 🎉 Merged PR [#4909](https://github.com/BlackArch/blackarch/pull/4909) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
-5. 💪 Opened PR [#4909](https://github.com/BlackArch/blackarch/pull/4909) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
+1. 💪 Opened PR [#4927](https://github.com/BlackArch/blackarch/pull/4927) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
+2. 🔒 Closed issue [#7](https://github.com/KevinCrrl/evillimiter-ng/issues/7) in [KevinCrrl/evillimiter-ng](https://github.com/KevinCrrl/evillimiter-ng)
+3. 🗣 Commented on [#7](https://github.com/KevinCrrl/evillimiter-ng/issues/7#issuecomment-4331105625) in [KevinCrrl/evillimiter-ng](https://github.com/KevinCrrl/evillimiter-ng)
+4. 💪 Opened PR [#4925](https://github.com/BlackArch/blackarch/pull/4925) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
+5. 🎉 Merged PR [#4909](https://github.com/BlackArch/blackarch/pull/4909) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
 <!--END_SECTION:activity-->
 
 ## Actividad por días
