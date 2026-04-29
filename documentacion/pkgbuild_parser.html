@@ -16,7 +16,7 @@
         <strong>pkgbuild_parser</strong> es un módulo escrito en <strong>Python</strong> (compatible con Python 3.x) diseñado para extraer información de un <strong>PKGBUILD</strong>. El propósito principal de este módulo es proporcionar un acceso sencillo y directo a los campos más importantes de un PKGBUILD sin depender de herramientas externas ni librerías adicionales.
     </p>
     <ul>
-        <li><strong>Versión:</strong> 1.2.1</li>
+        <li><strong>Versión:</strong> 2.0.0</li>
         <li><strong>Licencia:</strong> MPL-2.0 2026 KevinCrrl</li>
         <li><strong>Dependencias:</strong> Ninguna</li>
         <li><strong>Estilo:</strong> Simplicidad, sin dependencias externas, fácil de usar</li>
@@ -70,18 +70,6 @@
                 <td>Fuente(s) del paquete (<code>source</code>) como una lista de strings.</td>
             </tr>
             <tr>
-                <td><code>get_dict_base_info()</code></td>
-                <td>Diccionario con todos los campos anteriores en formato <code>{'pkgname': ..., 'pkgver': ..., ...}</code>.</td>
-            </tr>
-            <tr>
-                <td><code>base_info_to_json()</code></td>
-                <td>Información base en formato&nbsp;<strong>JSON</strong> con indentación y codificación UTF-8.</td>
-            </tr>
-            <tr>
-                <td><code>write_base_info_to_json(json_name)</code></td>
-                <td>Escribe la información base en un archivo JSON con nombre <code>json_name</code>.</td>
-            </tr>
-            <tr>
                 <td><code>get_epoch()</code></td>
                 <td><code>epoch</code> del paquete.</td>
             </tr>
@@ -99,19 +87,7 @@
             </tr>
             <tr>
                 <td><code>get_optdepends()</code></td>
-                <td>Lista de las dependencias opcionales del paquete.</td>
-            </tr>
-            <tr>
-                <td><code>get_dict_optdepends()</code></td>
                 <td>Diccionario de las dependencias opcionales del paquete.</td>
-            </tr>
-            <tr>
-                <td><code>optdepends_to_json()</code></td>
-                <td>JSON de las dependencias opcionales del paquete.</td>
-            </tr>
-            <tr>
-                <td><code>write_optdepends_to_json(json_name)</code></td>
-                <td>Escribe en un JSON con nombre <code>json_name</code> las dependencias opcionales del paquete.</td>
             </tr>
             <tr>
                 <td><code>get_options()</code></td>
@@ -122,12 +98,8 @@
                 <td>Lista de las dependencias de verificación del paquete.</td>
             </tr>
             <tr>
-                <td><code>get_sha256sums()</code></td>
-                <td>Lista de las sumas de verificación sha256.</td>
-            </tr>
-            <tr>
-                <td><code>get_sha512sums()</code></td>
-                <td>Lista de las sumas de verificación sha512.</td>
+                <td><code>get_sums(algorithm)</code></td>
+                <td>Lista de las sumas de verificación del <code>algoritmo</code>.</td>
             </tr>
             <tr>
                 <td><code>get_validpgpkeys()</code></td>
@@ -135,97 +107,75 @@
             </tr>
             <tr>
                 <td><code>get_conflicts()</code></td>
-                <td>Lista de los paquetes en conflicto.</td>
+                <td>Lista de paquetes en conflicto.</td>
             </tr>
             <tr>
                 <td><code>get_provides()</code></td>
-                <td>Lista de los paquetes proporcionados.</td>
+                <td>Lista de paquetes proporcionados.</td>
             </tr>
             <tr>
                 <td><code>get_replaces()</code></td>
-                <td>Lista de los paquetes que reemplaza.</td>
+                <td>Lista de paquetes que reemplaza.</td>
             </tr>
             <tr>
                 <td><code>get_pkgbase()</code></td>
-                <td>Paquete base (<code>pkgbase</code>) como string.</td>
+                <td>Paquete base (<code>pkgbase</code>) como una lista.</td>
             </tr>
         </tbody>
     </table>
     <p>
-        <strong>Nota:</strong> Las funciones internas (<code>get_base</code> y <code>multiline</code>) están pensadas para uso del módulo y <strong>no necesitan ser usadas por el usuario</strong>, excepto cuando desees crear funciones que no están en el parser.
+        <strong>Nota:</strong> Las funciones internas (<code>get_base</code>, <code>multiline</code>, <code>replacevar</code>, <code>processvar</code> y <code>remove_quotes</code>) están pensadas para uso del módulo y <strong>no necesitan ser usadas por el usuario</strong>, excepto cuando desees crear funciones que no están en el parser.
     </p>
+    <p>
+        Además, puedes usar la clase <code>InfoDict</code> para crear diccionarios a partir de información seleccionada, <code>InfoDict</code> tiene estos métodos:
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>Función</th>
+                <th>Qué retorna</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>get_dict()</code></td>
+                <td>Diccionario que contiene la información solicitada por el usuario.</td>
+            </tr>
+            <tr>
+                <td><code>to_json()</code></td>
+                <td>Convierte el diccionario a formato JSON.</td>
+            </tr>
+            <tr>
+                <td><code>write_json(json_name)</code></td>
+                <td>Escribe un archivo con el nombre proporcionado que contiene la información del diccionario en formato JSON.</td>
+            </tr>
+        </tbody>
+    </table>
     <hr>
     <h2>Instalación y uso</h2>
     <h3>Opción 1: AUR</h3>
     <p>
-        El módulo está disponible en el AUR como <strong><code>python-pkgbuild-parser</code></strong>
+        El módulo está disponible en el AUR como <strong><code>python-pkgbuild-parser</code></strong>.
     </p>
     <h3>Opción 2: PyPi</h3>
     <pre><code>pip install pkgbuild-parser</code></pre>
     <h2>Uso básico</h2>
-    <pre><code>import pkgbuild_parser
-import sys
-
-try:
-    mi_pkgbuild = pkgbuild_parser.Parser()
-except pkgbuild_parser.ParserFileError as exc:
-    print(exc)
-    sys.exit(1)
-
-# Obtener datos básicos
-try:
-    print(mi_pkgbuild.get_pkgname())
-    print(mi_pkgbuild.get_pkgver())
-    print(mi_pkgbuild.get_pkgrel())
-    print(mi_pkgbuild.get_pkgdesc())
-    print(mi_pkgbuild.get_arch())
-    print(mi_pkgbuild.get_url())
-    print(mi_pkgbuild.get_license())
-    print(mi_pkgbuild.get_source())
-    print(mi_pkgbuild.get_epoch())
-    print(mi_pkgbuild.get_full_package_name())
-    print(mi_pkgbuild.get_depends())
-    print(mi_pkgbuild.get_makedepends())
-    print(mi_pkgbuild.get_optdepends())
-    print(mi_pkgbuild.get_dict_optdepends())
-    print(mi_pkgbuild.optdepends_to_json())
-    mi_pkgbuild.write_optdepends_to_json()
-    print(mi_pkgbuild.get_options())
-    print(mi_pkgbuild.get_checkdepends())
-    print(mi_pkgbuild.get_sha256sums())
-    print(mi_pkgbuild.get_sha512sums())
-    print(mi_pkgbuild.get_validpgpkeys())
-    print(mi_pkgbuild.get_conflicts())
-    print(mi_pkgbuild.get_provides())
-    print(mi_pkgbuild.get_replaces())
-    print(mi_pkgbuild.get_pkgbase())
-
-
-    # Obtener un diccionario de toda la info
-    info = mi_pkgbuild.get_dict_base_info()
-    print(info)
-
-    # Mostrar en formato JSON
-    print(mi_pkgbuild.base_info_to_json())
-
-    # Obtener JSON y escribirlo a archivo
-    mi_pkgbuild.write_base_info_to_json("info.json")
-except pkgbuild_parser.ParserKeyError as e:
-    print(e)</code></pre>
+    <p><a href="https://github.com/KevinCrrl/pkgbuild_parser/blob/main/example.py">Ejemplo en GitHub</a></p>
+    <p><a href="https://codeberg.org/KevinCrrl/pkgbuild_parser/src/branch/main/example.py">Ejemplo en Codeberg</a></p>
     <h2>Manejo de errores</h2>
     <p>
         Si el archivo PKGBUILD no existe, se lanza un <code>ParserFileError</code>, que debe ser capturado para evitar que el programa falle.
     </p>
     <p>
-        También puede ocurrir que se lanza un <code>ParserKeyError</code> en caso de que la obtención de un valor del PKGBUILD falle, por ejemplo, si license no está bien declarado, y se hace get_license() se producirá dicha excepción.
+        También puede ocurrir que se lanza un <code>ParserKeyError</code> en caso de que la obtención de un valor del PKGBUILD falle, por ejemplo, si la licencia no está declarada correctamente, y se llama a <code>get_license()</code> se producirá dicha excepción.
     </p>
-    <h2>Limitaciones y Notas Extra</h2>
+    <h2>Limitaciones y notas adicionales</h2>
     <ul>
         <li>A partir de la versión 1.2.0, el parser puede reemplazar variables conocidas en un string de Bash. Por ejemplo, si intentas obtener un archivo fuente y está declarado en el PKGBUILD como "${url}/package-$pkgver.tar.gz", pkgbuild-parser podrá reconocer estas variables, recuperarlas y reemplazarlas por sus valores.</li>
         <li>El objetivo del módulo es extraer únicamente <strong>información básica</strong> de PKGBUILD estándar. No puede reemplazar variables que no reconozca, como "$mi_variable_personal", o variaciones de variables conocidas, como "$pkgname%sufijo".</li>
         <li>Funciona mejor con PKGBUILD que siguen las normas de la <strong>Arch Wiki</strong>.</li>
         <li>Desde la versión 0.4.0, el módulo puede extraer información de arrays o listas, como <code>depends</code>, <code>makedepends</code>, <code>source</code>, <code>optdepends</code>, <code>license</code>, <code>options</code> y <code>checkdepends</code>.</li>
-        <li>Desde la versión 1.0.0 las funciones que retornan un string, por defecto ya no incluyen las comillas</li>
+        <li>Desde la versión 1.0.0 las funciones que retornan un string ya no incluyen las comillas por defecto.</li>
     </ul>
     <br>
     <a href="/KevinCrrl/index.html">Volver a Inicio</a>
