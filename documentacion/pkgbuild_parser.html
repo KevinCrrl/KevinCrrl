@@ -16,7 +16,7 @@
         <strong>pkgbuild_parser</strong> es un módulo escrito en <strong>Python</strong> (compatible con Python 3.x) diseñado para extraer información de un <strong>PKGBUILD</strong>. El propósito principal de este módulo es proporcionar un acceso sencillo y directo a los campos más importantes de un PKGBUILD sin depender de herramientas externas ni librerías adicionales.
     </p>
     <ul>
-        <li><strong>Versión:</strong> 2.0.0</li>
+        <li><strong>Versión:</strong> 2.1.0</li>
         <li><strong>Licencia:</strong> MPL-2.0 2026 KevinCrrl</li>
         <li><strong>Dependencias:</strong> Ninguna</li>
         <li><strong>Estilo:</strong> Simplicidad, sin dependencias externas, fácil de usar</li>
@@ -72,6 +72,10 @@
             <tr>
                 <td><code>get_epoch()</code></td>
                 <td><code>epoch</code> del paquete.</td>
+            </tr>
+            <tr>
+                <td><code>get_install()</code></td>
+                <td>Nombre del script de instalación.</td>
             </tr>
             <tr>
                 <td><code>get_full_package_name()</code></td>
@@ -174,6 +178,7 @@
         <li>A partir de la versión 1.2.0, el parser puede reemplazar variables conocidas en un string de Bash. Por ejemplo, si intentas obtener un archivo fuente y está declarado en el PKGBUILD como "${url}/package-$pkgver.tar.gz", pkgbuild-parser podrá reconocer estas variables, recuperarlas y reemplazarlas por sus valores.</li>
         <li>El objetivo del módulo es extraer únicamente <strong>información básica</strong> de PKGBUILD estándar. No puede reemplazar variables que no reconozca, como "$mi_variable_personal", o variaciones de variables conocidas, como "$pkgname%sufijo".</li>
         <li>Funciona mejor con PKGBUILD que siguen las normas de la <strong>Arch Wiki</strong>.</li>
+        <li>Este código no implementa un parser real en sí, sino que se limita a leer el archivo PKGBUILD y extraer la información necesaria mediante varias condiciones y lógica de estados, sin embargo, intento que sea lo más preciso posible :)</li>
         <li>Desde la versión 0.4.0, el módulo puede extraer información de arrays o listas, como <code>depends</code>, <code>makedepends</code>, <code>source</code>, <code>optdepends</code>, <code>license</code>, <code>options</code> y <code>checkdepends</code>.</li>
         <li>Desde la versión 1.0.0 las funciones que retornan un string ya no incluyen las comillas por defecto.</li>
     </ul>
