@@ -4,6 +4,17 @@ body {
     margin: 50px;
 }
 
+header {
+    font-size: 30px;
+    color: rgb(42, 7, 100);
+    background-color: rgb(29, 197, 240);
+    text-align: center;
+    margin-left: -50px;
+    margin-right: -50px;
+    margin-top: -50px; 
+    padding: 20px;
+}
+
 h1 {
     font-size: 60px;
     color: rgb(98, 224, 247);
