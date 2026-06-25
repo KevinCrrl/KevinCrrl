@@ -1,12 +1,14 @@
 # KevinCrrl
 
-## Sitio Personal
+## Personal Website (Spanish)
 
-https://KevinCrrl.github.io/KevinCrrl/
+[https://KevinCrrl.github.io/KevinCrrl/](https://KevinCrrl.github.io/KevinCrrl/)
 
-Más información sobre mí que no está en el sitio web:
+------------------
 
-## Actividad reciente
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=KevinCrrl&layout=compact&theme=chartreuse-dark" alt="Most used languajes" width=450px/>
+
+## Recent Activity
 
 <!--START_SECTION:activity-->
 1. 💪 Opened PR [#4967](https://github.com/BlackArch/blackarch/pull/4967) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
@@ -16,6 +18,6 @@ Más información sobre mí que no está en el sitio web:
 5. 💪 Opened PR [#4959](https://github.com/BlackArch/blackarch/pull/4959) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
 <!--END_SECTION:activity-->
 
-## Actividad por días
+## Activity by day
 
-![Actividad en los últimos 31 días](https://github-readme-activity-graph.vercel.app/graph?username=KevinCrrl&theme=tokyo-night&hide_border=true)
+![Activity by day](https://github-readme-activity-graph.vercel.app/graph?username=KevinCrrl&theme=tokyo-night&hide_border=true)
