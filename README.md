@@ -6,7 +6,7 @@
 
 ------------------
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=KevinCrrl&layout=compact&theme=chartreuse-dark" alt="Most used languajes" width=450px/>
+<img src="./profile/stats.svg" alt="Most used languajes" width=450px/>
 
 ## Recent Activity
 
