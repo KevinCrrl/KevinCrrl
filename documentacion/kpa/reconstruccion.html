@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Reparar KPA</title>
+    <link rel="stylesheet" href="/KevinCrrl/estilos.css">
+</head>
+
+<body>
+    <h1>Reconstrucción de emergencia</h1>
+    <p>Cuando ocurre una actualización mayor de Python (por ejemplo de la versión 3.14.x a la versión 3.15.x), los
+        paquetes Python del sistema deben ser reconstruidos, generalmente no nos enteramos de ello ya que los
+        mantenedores de las distribuciones se encargan de reconstruir los paquetes de sus repositorios oficiales, sin
+        embargo, KPA y python-pkgbuild-parser son paquetes del AUR, no de un repositorio oficial, por ello, es tarea del
+        usuario reconstruirlos.
+    </p>
+    <p>
+        Ya que ambos son paquetes escritos en Python, no se puede usar KPA para auto-reinstalarse, ya que lanzará un
+        ModuleNotFoundError, para ello desde la versión 3.1.0, se incluye mkpa como script auxiliar para reconstuir KPA
+        y python-pkgbuild-parser usando Bash en vez de Python y ser independiente.
+    </p>
+    <p>
+        Para realizar la reconstrucción ejecute como usuario NO root:
+    </p>
+    <code>$ mkpa fix</code>
+    <p>Siga los pasos indicados para terminar el proceso con éxito.</p>
+    <br>
+    <a href="/KevinCrrl/index.html">Volver a Inicio</a>
+</body>
+
+</html>
