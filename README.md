@@ -11,10 +11,10 @@
 ## Recent Activity
 
 <!--START_SECTION:activity-->
-1. 🚀 Published release [V3.1.0](https://github.com/KevinCrrl/kpa/releases/tag/3.1.0) in [KevinCrrl/kpa](https://github.com/KevinCrrl/kpa)
-2. 🗣 Commented on [#3](https://github.com/xlibre-arch/xlibre-arch/issues/3#issuecomment-4896890980) in [xlibre-arch/xlibre-arch](https://github.com/xlibre-arch/xlibre-arch)
-3. ❗ Opened issue [#3](https://github.com/xlibre-arch/xlibre-arch/issues/3) in [xlibre-arch/xlibre-arch](https://github.com/xlibre-arch/xlibre-arch)
-4. ℹ️ Labeled issue [#3](https://github.com/xlibre-arch/xlibre-arch/issues/3) in [xlibre-arch/xlibre-arch](https://github.com/xlibre-arch/xlibre-arch)
+1. 🔒 Closed issue [#3](https://github.com/xlibre-arch/xlibre-arch/issues/3) in [xlibre-arch/xlibre-arch](https://github.com/xlibre-arch/xlibre-arch)
+2. 🚀 Published release [V3.1.0](https://github.com/KevinCrrl/kpa/releases/tag/3.1.0) in [KevinCrrl/kpa](https://github.com/KevinCrrl/kpa)
+3. 🗣 Commented on [#3](https://github.com/xlibre-arch/xlibre-arch/issues/3#issuecomment-4896890980) in [xlibre-arch/xlibre-arch](https://github.com/xlibre-arch/xlibre-arch)
+4. ❗ Opened issue [#3](https://github.com/xlibre-arch/xlibre-arch/issues/3) in [xlibre-arch/xlibre-arch](https://github.com/xlibre-arch/xlibre-arch)
 5. ℹ️ Labeled issue [#3](https://github.com/xlibre-arch/xlibre-arch/issues/3) in [xlibre-arch/xlibre-arch](https://github.com/xlibre-arch/xlibre-arch)
 <!--END_SECTION:activity-->
 
