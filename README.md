@@ -11,11 +11,11 @@
 ## Recent Activity
 
 <!--START_SECTION:activity-->
-1. 🚀 Published release [V2.4.1](https://github.com/KevinCrrl/evillimiter-ng/releases/tag/2.4.1) in [KevinCrrl/evillimiter-ng](https://github.com/KevinCrrl/evillimiter-ng)
-2. 💪 Opened PR [#4976](https://github.com/BlackArch/blackarch/pull/4976) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
-3. 🚀 Published release [V2.4.0](https://github.com/KevinCrrl/evillimiter-ng/releases/tag/2.4.0) in [KevinCrrl/evillimiter-ng](https://github.com/KevinCrrl/evillimiter-ng)
-4. 🔒 Closed issue [#3](https://github.com/xlibre-arch/xlibre-arch/issues/3) in [xlibre-arch/xlibre-arch](https://github.com/xlibre-arch/xlibre-arch)
-5. 🚀 Published release [V3.1.0](https://github.com/KevinCrrl/kpa/releases/tag/3.1.0) in [KevinCrrl/kpa](https://github.com/KevinCrrl/kpa)
+1. 🎉 Merged PR [#4976](https://github.com/BlackArch/blackarch/pull/4976) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
+2. 🚀 Published release [V2.4.1](https://github.com/KevinCrrl/evillimiter-ng/releases/tag/2.4.1) in [KevinCrrl/evillimiter-ng](https://github.com/KevinCrrl/evillimiter-ng)
+3. 💪 Opened PR [#4976](https://github.com/BlackArch/blackarch/pull/4976) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
+4. 🚀 Published release [V2.4.0](https://github.com/KevinCrrl/evillimiter-ng/releases/tag/2.4.0) in [KevinCrrl/evillimiter-ng](https://github.com/KevinCrrl/evillimiter-ng)
+5. 🔒 Closed issue [#3](https://github.com/xlibre-arch/xlibre-arch/issues/3) in [xlibre-arch/xlibre-arch](https://github.com/xlibre-arch/xlibre-arch)
 <!--END_SECTION:activity-->
 
 ## Activity by day
