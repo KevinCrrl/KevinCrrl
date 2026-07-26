@@ -11,11 +11,11 @@
 ## Recent Activity
 
 <!--START_SECTION:activity-->
-1. 💪 Opened PR [#356](https://github.com/Godiesc/firefox-gx/pull/356) in [Godiesc/firefox-gx](https://github.com/Godiesc/firefox-gx)
-2. 💪 Opened PR [#4997](https://github.com/BlackArch/blackarch/pull/4997) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
-3. 🎉 Merged PR [#4995](https://github.com/BlackArch/blackarch/pull/4995) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
-4. 💪 Opened PR [#4995](https://github.com/BlackArch/blackarch/pull/4995) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
-5. 🚀 Published release [V3.1.1](https://github.com/KevinCrrl/kpa/releases/tag/3.1.1) in [KevinCrrl/kpa](https://github.com/KevinCrrl/kpa)
+1. 🎉 Merged PR [#4997](https://github.com/BlackArch/blackarch/pull/4997) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
+2. 💪 Opened PR [#356](https://github.com/Godiesc/firefox-gx/pull/356) in [Godiesc/firefox-gx](https://github.com/Godiesc/firefox-gx)
+3. 💪 Opened PR [#4997](https://github.com/BlackArch/blackarch/pull/4997) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
+4. 🎉 Merged PR [#4995](https://github.com/BlackArch/blackarch/pull/4995) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
+5. 💪 Opened PR [#4995](https://github.com/BlackArch/blackarch/pull/4995) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
 <!--END_SECTION:activity-->
 
 ## Activity by day
