@@ -11,11 +11,11 @@
 ## Recent Activity
 
 <!--START_SECTION:activity-->
-1. 🚀 Published release [V3.2.0](https://github.com/KevinCrrl/kpa/releases/tag/3.2.0) in [KevinCrrl/kpa](https://github.com/KevinCrrl/kpa)
-2. 🎉 Merged PR [#356](https://github.com/Godiesc/firefox-gx/pull/356) in [Godiesc/firefox-gx](https://github.com/Godiesc/firefox-gx)
-3. 🎉 Merged PR [#4997](https://github.com/BlackArch/blackarch/pull/4997) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
-4. 💪 Opened PR [#356](https://github.com/Godiesc/firefox-gx/pull/356) in [Godiesc/firefox-gx](https://github.com/Godiesc/firefox-gx)
-5. 💪 Opened PR [#4997](https://github.com/BlackArch/blackarch/pull/4997) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
+1. 🗣 Commented on [#4968](https://github.com/BlackArch/blackarch/issues/4968#issuecomment-5182215492) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
+2. ℹ️ Labeled issue [#5001](https://github.com/BlackArch/blackarch/issues/5001) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
+3. ❗ Opened issue [#5001](https://github.com/BlackArch/blackarch/issues/5001) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
+4. 💪 Opened PR [#5000](https://github.com/BlackArch/blackarch/pull/5000) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
+5. 🚀 Published release [V3.2.0](https://github.com/KevinCrrl/kpa/releases/tag/3.2.0) in [KevinCrrl/kpa](https://github.com/KevinCrrl/kpa)
 <!--END_SECTION:activity-->
 
 ## Activity by day
