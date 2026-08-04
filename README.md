@@ -11,11 +11,11 @@
 ## Recent Activity
 
 <!--START_SECTION:activity-->
-1. 🗣 Commented on [#4968](https://github.com/BlackArch/blackarch/issues/4968#issuecomment-5182215492) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
-2. ℹ️ Labeled issue [#5001](https://github.com/BlackArch/blackarch/issues/5001) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
-3. ❗ Opened issue [#5001](https://github.com/BlackArch/blackarch/issues/5001) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
-4. 💪 Opened PR [#5000](https://github.com/BlackArch/blackarch/pull/5000) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
-5. 🚀 Published release [V3.2.0](https://github.com/KevinCrrl/kpa/releases/tag/3.2.0) in [KevinCrrl/kpa](https://github.com/KevinCrrl/kpa)
+1. 🎉 Merged PR [#5000](https://github.com/BlackArch/blackarch/pull/5000) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
+2. 🗣 Commented on [#4968](https://github.com/BlackArch/blackarch/issues/4968#issuecomment-5182215492) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
+3. ℹ️ Labeled issue [#5001](https://github.com/BlackArch/blackarch/issues/5001) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
+4. ❗ Opened issue [#5001](https://github.com/BlackArch/blackarch/issues/5001) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
+5. 💪 Opened PR [#5000](https://github.com/BlackArch/blackarch/pull/5000) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
 <!--END_SECTION:activity-->
 
 ## Activity by day
