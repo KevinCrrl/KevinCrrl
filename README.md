@@ -20,4 +20,4 @@
 
 ## Activity by day
 
-![Activity by day](https://github-readme-activity-graph.vercel.app/graph?username=KevinCrrl&theme=tokyo-night&hide_border=true)
+![Activity Graph](https://raw.githubusercontent.com/KevinCrrl/KevinCrrl/profile/activity-graph.svg)
