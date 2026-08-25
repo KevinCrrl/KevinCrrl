@@ -20,4 +20,4 @@
 
 ## Activity by day
 
-![Activity Graph](https://raw.githubusercontent.com/KevinCrrl/KevinCrrl/profile/activity-graph.svg)
+![Activity Graph](https://github.com/KevinCrrl/KevinCrrl/raw/refs/heads/main/profile/activity-graph.svg)
