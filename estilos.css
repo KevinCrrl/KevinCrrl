@@ -97,3 +97,19 @@ li {
 .categoria {
     margin-bottom: 30px;
 }
+
+footer {
+    background-color: rgb(87, 87, 87);
+    padding: 10px;
+    text-align: center;
+    margin-left: -50px;
+    margin-right: -50px;
+    margin-bottom: -50px;
+    a {
+        text-decoration: none;
+        font-size: 40px;
+    }
+    p {
+        text-align: center;
+    }
+}
