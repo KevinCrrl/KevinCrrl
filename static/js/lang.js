@@ -26,7 +26,7 @@ if (navigator.language.startsWith("es")) {
     userLang = "es";
 }
 
-function addTranslationLink(pageLang) {
+function addTranslationLink(pageLang, esPage, enPage) {
     if (pageLang != userLang) {
         const linkDiv = document.createElement("div");
         const link = document.createElement("a");
@@ -34,11 +34,11 @@ function addTranslationLink(pageLang) {
         let content = "";
         if (userLang == "es" && pageLang != "es") {
             content = document.createTextNode("Se detectó el idioma español en su navegador, ¿Desea cambiar a la traducción disponible? ");
-            link.href = "/KevinCrrl/documentacion/pkgbuild_parser/";
+            link.href = esPage;
             link.textContent = "Ir a traducción";
         } else if (userLang != "es" && pageLang == "es") {
             content = document.createTextNode("The language in your browser does not appear to be Spanish, ¿Go to the English translation?: ");
-            link.href = "/KevinCrrl/documentation/pkgbuild_parser/";
+            link.href = enPage;
             link.textContent = "Go to translation"
         }
 
