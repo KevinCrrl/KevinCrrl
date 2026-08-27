@@ -21,7 +21,7 @@ def get_html(body: str, title: str = "KevinCrrl") -> str:
 <body>
 {body}
 <a href="/KevinCrrl/index.html">Back to homepage</a>
-<script>addTranslationLink("en");</script>
+<script>addTranslationLink("en", "/KevinCrrl/documentacion/pkgbuild_parser", "/KevinCrrl/documentation/pkgbuild_parser")</script>
 </body>
 
 </html>
