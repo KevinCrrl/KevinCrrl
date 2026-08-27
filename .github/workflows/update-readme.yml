@@ -1,11 +1,11 @@
-name: Update README
+name: Update repo
 on:
   schedule:
     - cron: "0 */6 * * *"
   workflow_dispatch:
 jobs:
   build:
-    name: Update this repo's README with recent activity
+    name: Update this repo with recent activity and translation(s)
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -32,10 +32,14 @@ jobs:
           output_path: profile/activity-graph.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Commit cards
+      - name: Update translation(s)
+        run: |
+          apt install python3 python3-markdown && python3 to_html.py
+
+      - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add profile/*.svg
+          git add profile/*.svg documentation/pkgbuild_parser/*.html
           git commit -m "Update README cards" || exit 0
           git push
