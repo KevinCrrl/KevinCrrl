@@ -7,23 +7,25 @@ import markdown
 
 
 def get_html(body: str, title: str = "KevinCrrl") -> str:
-    return f"""<!DOCTYPE html>
+    return f'''<!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="UTF-8">
     <title>{title}</title>
     <link rel="stylesheet" href="/KevinCrrl/estilos.css">
+    <script src="/KevinCrrl/static/js/lang.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
 </head>
 
 <body>
 {body}
 <a href="/KevinCrrl/index.html">Back to homepage</a>
+<script>addTranslationLink("en");</script>
 </body>
 
 </html>
-"""
+'''
 
 
 urllib.request.urlretrieve(

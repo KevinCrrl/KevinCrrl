@@ -82,6 +82,9 @@ li {
 
 .aviso {
     background-color: orange;
+    a {
+        color: rgb(7, 61, 97);
+    }
 }
 
 .advertencia {
