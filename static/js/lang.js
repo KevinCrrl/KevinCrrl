@@ -30,13 +30,14 @@ function addTranslationLink(pageLang, esPage, enPage) {
     if (pageLang != userLang) {
         const linkDiv = document.createElement("div");
         const link = document.createElement("a");
-        linkDiv.className = "aviso";
         let content = "";
         if (userLang == "es" && pageLang != "es") {
+            linkDiv.className = "aviso";
             content = document.createTextNode("Se detectó el idioma español en su navegador, ¿Desea cambiar a la traducción disponible? ");
             link.href = esPage;
             link.textContent = "Ir a traducción";
         } else if (userLang != "es" && pageLang == "es") {
+            linkDiv.className = "notice";
             content = document.createTextNode("The language in your browser does not appear to be Spanish, ¿Go to the English translation?: ");
             link.href = enPage;
             link.textContent = "Go to translation"

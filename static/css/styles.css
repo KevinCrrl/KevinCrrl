@@ -52,13 +52,17 @@ li {
 
 /* Texto de plantillas */
 
-.aviso::before, .advertencia::before, .importante::before {
+.aviso::before, .advertencia::before, .importante::before, .notice::before {
     font-weight: bold;
     white-space: pre;
 }
 
 .aviso::before {
     content: "AVISO:\A\A";
+}
+
+.notice::before {
+    content: "NOTICE:\A\A";
 }
 
 .advertencia::before {
@@ -73,14 +77,14 @@ li {
 
 /* Estilos generales de plantillas */
 
-.aviso, .advertencia, .importante {
+.aviso, .advertencia, .importante, .notice {
     padding: 10px;
     border-radius: 5px;
     font-size: 17px;
     text-align: center;
 }
 
-.aviso {
+.aviso, .notice {
     background-color: orange;
     a {
         color: rgb(7, 61, 97);
