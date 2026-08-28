@@ -13,7 +13,7 @@ def get_html(body: str, title: str = "KevinCrrl") -> str:
 <head>
     <meta charset="UTF-8">
     <title>{title}</title>
-    <link rel="stylesheet" href="/KevinCrrl/estilos.css">
+    <link rel="stylesheet" href="/KevinCrrl/static/css/styles.css">
     <script src="/KevinCrrl/static/js/lang.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
 </head>
@@ -25,7 +25,7 @@ def get_html(body: str, title: str = "KevinCrrl") -> str:
 </body>
 
 </html>
-'''
+'''.replace('<h1>pkgbuild_parser</h1>', '<h1 id="main_title">pkgbuild_parser</h1>')
 
 
 urllib.request.urlretrieve(
