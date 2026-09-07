@@ -12,11 +12,11 @@
 
 <!--START_SECTION:activity-->
 
-1. 🚀 Published release [V3.2.2](https://github.com/KevinCrrl/kpa/releases/tag/3.2.2) in [KevinCrrl/kpa](https://github.com/KevinCrrl/kpa)
-2. 🗣 Commented on [#361](https://github.com/tinytag/tinytag/issues/361#issuecomment-5479876349) in [tinytag/tinytag](https://github.com/tinytag/tinytag)
-3. ℹ️ Labeled issue [#361](https://github.com/tinytag/tinytag/issues/361) in [tinytag/tinytag](https://github.com/tinytag/tinytag)
-4. ❗ Opened issue [#361](https://github.com/tinytag/tinytag/issues/361) in [tinytag/tinytag](https://github.com/tinytag/tinytag)
-5. 🚀 Published release [V3.2.1](https://github.com/KevinCrrl/kpa/releases/tag/3.2.1) in [KevinCrrl/kpa](https://github.com/KevinCrrl/kpa)
+1. 🚀 Published release [V3.0.1](https://github.com/KevinCrrl/evillimiter-ng/releases/tag/3.0.1) in [KevinCrrl/evillimiter-ng](https://github.com/KevinCrrl/evillimiter-ng)
+2. 🔒 Closed issue [#11](https://github.com/KevinCrrl/evillimiter-ng/issues/11) in [KevinCrrl/evillimiter-ng](https://github.com/KevinCrrl/evillimiter-ng)
+3. 🚀 Published release [V3.0.0](https://github.com/KevinCrrl/evillimiter-ng/releases/tag/3.0.0) in [KevinCrrl/evillimiter-ng](https://github.com/KevinCrrl/evillimiter-ng)
+4. 🚀 Published release [V3.2.2](https://github.com/KevinCrrl/kpa/releases/tag/3.2.2) in [KevinCrrl/kpa](https://github.com/KevinCrrl/kpa)
+5. 🗣 Commented on [#361](https://github.com/tinytag/tinytag/issues/361#issuecomment-5479876349) in [tinytag/tinytag](https://github.com/tinytag/tinytag)
 
 <!--END_SECTION:activity-->
 
