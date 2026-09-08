@@ -12,7 +12,7 @@
 
 <!--START_SECTION:activity-->
 
-1. 🚀 Published release [V3.0.1](https://github.com/KevinCrrl/evillimiter-ng/releases/tag/3.0.1) in [KevinCrrl/evillimiter-ng](https://github.com/KevinCrrl/evillimiter-ng)
+1. 🚀 Published release [V3.0.2](https://github.com/KevinCrrl/evillimiter-ng/releases/tag/3.0.2) in [KevinCrrl/evillimiter-ng](https://github.com/KevinCrrl/evillimiter-ng)
 2. 🔒 Closed issue [#11](https://github.com/KevinCrrl/evillimiter-ng/issues/11) in [KevinCrrl/evillimiter-ng](https://github.com/KevinCrrl/evillimiter-ng)
 3. 🚀 Published release [V3.0.0](https://github.com/KevinCrrl/evillimiter-ng/releases/tag/3.0.0) in [KevinCrrl/evillimiter-ng](https://github.com/KevinCrrl/evillimiter-ng)
 4. 🚀 Published release [V3.2.2](https://github.com/KevinCrrl/kpa/releases/tag/3.2.2) in [KevinCrrl/kpa](https://github.com/KevinCrrl/kpa)
