@@ -12,11 +12,11 @@
 
 <!--START_SECTION:activity-->
 
-1. 🎉 Merged PR [#5083](https://github.com/BlackArch/blackarch/pull/5083) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
-2. 🎉 Merged PR [#5084](https://github.com/BlackArch/blackarch/pull/5084) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
-3. 🎉 Merged PR [#5082](https://github.com/BlackArch/blackarch/pull/5082) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
-4. 💪 Opened PR [#5084](https://github.com/BlackArch/blackarch/pull/5084) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
-5. 💪 Opened PR [#5083](https://github.com/BlackArch/blackarch/pull/5083) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
+1. 💪 Opened PR [#5106](https://github.com/BlackArch/blackarch/pull/5106) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
+2. 🎉 Merged PR [#5083](https://github.com/BlackArch/blackarch/pull/5083) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
+3. 🎉 Merged PR [#5084](https://github.com/BlackArch/blackarch/pull/5084) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
+4. 🎉 Merged PR [#5082](https://github.com/BlackArch/blackarch/pull/5082) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
+5. 💪 Opened PR [#5084](https://github.com/BlackArch/blackarch/pull/5084) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
 
 <!--END_SECTION:activity-->
 
