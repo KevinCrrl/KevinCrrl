@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <title>KPA</title>
     <link rel="stylesheet" href="/KevinCrrl/static/css/styles.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.12.0/styles/tokyo-night-dark.min.css">
+    <script src="/KevinCrrl/static/js/highlight/highlight11.js"></script>
+    <script>hljs.highlightAll();</script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 </head>
 
@@ -60,14 +64,12 @@
         A partir de la versión 3.0.0, Ins y Act tienen múltiples banderas, para consultarlas y ver que hace cada una,
         use:
     <pre>
-            <code>
-                kpa Ins --help
-                # y/o
-                kpa Act --help
+            <code class="bash">kpa Ins --help
+# y/o
+kpa Act --help
 
-                # A partir de la versión 3.2.0, Conf también tiene opciones propias:
-                kpa Conf --help
-            </code>
+# A partir de la versión 3.2.0, Conf también tiene opciones propias:
+kpa Conf --help</code>
         </pre>
     </p>
     <p>
@@ -110,17 +112,17 @@
         caché de la carpeta de KPA.
     </p>
     <pre>
-    <code>
-        $ kpa Limp huerfanos
-        # O
-        $ kpa Limp cache
-    </code>
+    <code class="bash">kpa Limp huerfanos
+# O
+kpa Limp cache</code>
     </pre>
     <p>
-        Al usar <code>Limp huerfanos</code>, KPA buscará paquetes que fueron instalados como dependencias pero que ya no
+        Al usar <span class="code">Limp huerfanos</span>, KPA buscará paquetes que fueron instalados como dependencias
+        pero que ya no
         son requeridos por ningún paquete, y le preguntará si desea eliminarlos.
         <br>
-        Al usar <code>Limp cache</code>, KPA eliminará los residuos de archivos comprimidos y carpetas src y pkg de la
+        Al usar <span class="code">Limp cache</span>, KPA eliminará los residuos de archivos comprimidos y carpetas src
+        y pkg de la
         carpeta donde KPA construye y almacena los PKGBUILD.
     </p>
     <h2>kpa.json</h2>
@@ -134,11 +136,12 @@
         A continuación, se explica para que se usan cada una de las variables en el archivo kpa.json en caso de que
         quiera personalizar la experiencia:
         <br>
-        El archivo se ubica en <code>$XDG_CONFIG_HOME/kpa/kpa.json</code> (normalmente
-        <code>~/.config/kpa/kpa.json</code>).
+        El archivo se ubica en <span class="code">$XDG_CONFIG_HOME/kpa/kpa.json</span> (normalmente
+        <span class="code">~/.config/kpa/kpa.json</span>).
         <br>
     <ul>
-        <li>visor: Esta variable se usa para ver los PKGBUILDs y/o diffs, por defecto usa "kpa", ese valor significa que se usará
+        <li>visor: Esta variable se usa para ver los PKGBUILDs y/o diffs, por defecto usa "kpa", ese valor significa que
+            se usará
             el visor incorporado en KPA, es un visor que ofrece resaltado para código Bash y diffs.</li>
         <br>
         <li>visor_theme: Configura el tema con el que el visor integrado mostrará los archivos, por defecto usa Monokai,
@@ -164,7 +167,8 @@
         <br>
         <li>clone_branch: Ciertas URLs como el mirror de GitHub de archlinux pueden requerir usar un comando especial
             para clonar, en este caso clone_branch que es una variable de tipo booleano (true/false) le dice a KPA si
-            usar el comando <code>git clone --branch paquete --single-branch url_del_repo paquete</code> o clonar de
+            usar el comando <span class="code">git clone --branch paquete --single-branch url_del_repo paquete</span> o
+            clonar de
             manera normal.</li>
     </ul>
     </p>

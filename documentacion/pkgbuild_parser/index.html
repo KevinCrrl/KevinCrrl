@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <title>Pkgbuild Parser</title>
     <link rel="stylesheet" href="/KevinCrrl/static/css/styles.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.12.0/styles/tokyo-night-dark.min.css">
     <script src="/KevinCrrl/static/js/lang.js"></script>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <script src="/KevinCrrl/static/js/highlight/highlight11.js"></script>
+    <script>hljs.highlightAll();</script>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
 </head>
 
 <body>
-    <h1 id="main_title">pkgbuild parser</h1>
+    <h1 id="main_title">pkgbuild_parser</h1>
     <p><a href="/KevinCrrl/documentation/pkgbuild_parser">Documentación en Inglés</a></p>
     <h2>Introducción</h2>
     <p>
@@ -29,29 +33,28 @@
         Este módulo permite obtener datos como el nombre del paquete, versión, descripción, licencia, URL, archivos
         fuente, etc.
     </p>
+    <hr>
     <h2>Contribuir a PKGBUILD Parser</h2>
-    <p>Mira el archivo <a
+    <p>Consulta el archivo <a
             href="https://github.com/KevinCrrl/pkgbuild_parser/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a></p>
     <h2>Clases y su uso</h2>
-    <pre>
-      <code>
-from pkgbuild_parser import Parser, InfoDict
+    <pre><code class="python">from pkgbuild_parser import Parser, InfoDict
 
-parser = Parser(FILENAME (String; Valor por defecto: "PKGBUILD")
-                ENABLE_CACHE (Boolean; Valor por defecto: True)
-                EXTRA_NAMES (Lista de strings; Valor por defecto: None))
+parser = Parser(&lt;FILENAME&gt; (String; Valor por defecto: &quot;PKGBUILD&quot;)
+                &lt;ENABLE_CACHE&gt; (Boolean; Valor por defecto: True)
+                &lt;EXTRA_NAMES&gt; (Lista de strings; Valor por defecto: None))
 
-infodict = InfoDict(PARSER (Parser; Sin valor por defecto)
-                    *INFO_TO_GET (Strings; Sin valor por defecto)
-                    MULTILINE (Boolean; Valor por defecto: False)
-                    IGNORE_ERRORS (Boolean; Valor por defecto: False))
-      </code>
-    </pre>
+infodict = InfoDict(&lt;PARSER&gt; (Parser; Sin valor por defecto)
+                    &lt;*INFO_TO_GET&gt; (Strings; Sin valor por defecto)
+                    &lt;MULTILINE&gt; (Boolean; Valor por defecto: False)
+                    &lt;IGNORE_ERRORS&gt; (Boolean; Valor por defecto: False))
+</code></pre>
     <h3>Clase Parser</h3>
     <ul>
         <li><strong>filename: </strong>Ruta del PKGBUILD, no un directorio</li>
-        <li><strong>enable_cache: </strong>Habilita un diccionario usado para guardar variables y evitar re-parsear.</li>
-        <li><strong>extra_names: </strong>Lista de variables personalizadas para ser seguidad por replacevar.</li>
+        <li><strong>enable_cache: </strong>Habilita un diccionario usado para guardar variables y evitar re-parsear.
+        </li>
+        <li><strong>extra_names: </strong>Lista de variables personalizadas para ser seguidas por replacevar.</li>
     </ul>
     <h3>Clase InfoDict</h3>
     <ul>
@@ -60,7 +63,6 @@ infodict = InfoDict(PARSER (Parser; Sin valor por defecto)
         <li><strong>multiline: </strong>Retorna listas usando multiline o strings usando get_base.</li>
         <li><strong>ignore_errors: </strong>Ignora todos los KeyNotFoundError.</li>
     </ul>
-    <hr>
     <h2>Funciones principales para el usuario (Clase Parser)</h2>
     <table>
         <thead>
@@ -71,105 +73,125 @@ infodict = InfoDict(PARSER (Parser; Sin valor por defecto)
         </thead>
         <tbody>
             <tr>
-                <td><code>get_pkgname()</code></td>
-                <td>Nombre del paquete (<code>pkgname</code>) como string.</td>
+                <td><span class="code">get_pkgname()</span></td>
+                <td>Nombre del paquete (<span class="code">pkgname</span>) como string.</td>
             </tr>
             <tr>
-                <td><code>get_pkgver()</code></td>
-                <td>Versión del paquete (<code>pkgver</code>) como string.</td>
+                <td><span class="code">get_pkgver()</span></td>
+                <td>Versión del paquete (<span class="code">pkgver</span>) como string.</td>
             </tr>
             <tr>
-                <td><code>get_pkgrel()</code></td>
-                <td>Número de release (<code>pkgrel</code>) como string.</td>
+                <td><span class="code">get_pkgrel()</span></td>
+                <td>Número de release (<span class="code">pkgrel</span>) como string.</td>
             </tr>
             <tr>
-                <td><code>get_pkgdesc()</code></td>
-                <td>Descripción del paquete (<code>pkgdesc</code>) como string.</td>
+                <td><span class="code">get_pkgdesc()</span></td>
+                <td>Descripción del paquete (<span class="code">pkgdesc</span>) como string.</td>
             </tr>
             <tr>
-                <td><code>get_arch()</code></td>
-                <td>Arquitectura del paquete (<code>arch</code>) como una lista de strings.</td>
+                <td><span class="code">get_arch()</span></td>
+                <td>Arquitectura del paquete (<span class="code">arch</span>) como una lista de strings.</td>
             </tr>
             <tr>
-                <td><code>get_url()</code></td>
-                <td>URL principal del proyecto (<code>url</code>) como string.</td>
+                <td><span class="code">get_url()</span></td>
+                <td>URL principal del proyecto (<span class="code">url</span>) como string.</td>
             </tr>
             <tr>
-                <td><code>get_license()</code></td>
-                <td>Licencia del paquete (<code>license</code>) como una lista de strings.</td>
+                <td><span class="code">get_license()</span></td>
+                <td>Licencia del paquete (<span class="code">license</span>) como una lista de strings.</td>
             </tr>
             <tr>
-                <td><code>get_source()</code></td>
-                <td>Fuente(s) del paquete (<code>source</code>) como una lista de strings.</td>
+                <td><span class="code">get_source()</span></td>
+                <td>Fuente(s) del paquete (<span class="code">source</span>) como una lista de strings.</td>
             </tr>
             <tr>
-                <td><code>get_epoch()</code></td>
-                <td><code>epoch</code> del paquete.</td>
+                <td><span class="code">get_epoch()</span></td>
+                <td><span class="code">epoch</span> del paquete.</td>
             </tr>
             <tr>
-                <td><code>get_install()</code></td>
+                <td><span class="code">get_install()</span></td>
                 <td>Nombre del script de instalación.</td>
             </tr>
             <tr>
-                <td><code>get_full_package_name()</code></td>
-                <td>Nombre completo del paquete, incluyendo <code>epoch</code>, versión y <code>pkgrel</code>.</td>
+                <td><span class="code">get_full_package_name()</span></td>
+                <td>Nombre completo del paquete, incluyendo <span class="code">epoch</span>, versión y <span
+                        class="code">pkgrel</span>.</td>
             </tr>
             <tr>
-                <td><code>get_depends()</code></td>
+                <td><span class="code">get_depends()</span></td>
                 <td>Lista de las dependencias del paquete.</td>
             </tr>
             <tr>
-                <td><code>get_makedepends()</code></td>
+                <td><span class="code">get_makedepends()</span></td>
                 <td>Lista de las dependencias de compilación del paquete.</td>
             </tr>
             <tr>
-                <td><code>get_optdepends()</code></td>
+                <td><span class="code">get_optdepends()</span></td>
                 <td>Diccionario de las dependencias opcionales del paquete.</td>
             </tr>
             <tr>
-                <td><code>get_options()</code></td>
+                <td><span class="code">get_options()</span></td>
                 <td>Lista de las opciones del paquete.</td>
             </tr>
             <tr>
-                <td><code>get_checkdepends()</code></td>
+                <td><span class="code">get_checkdepends()</span></td>
                 <td>Lista de las dependencias de verificación del paquete.</td>
             </tr>
             <tr>
-                <td><code>get_sums(algorithm)</code></td>
-                <td>Lista de las sumas de verificación del <code>algoritmo</code>.</td>
+                <td><span class="code">get_sums(algorithm)</span></td>
+                <td>Lista de las sumas de verificación del algoritmo (<span class="code">algorithm</span>).</td>
             </tr>
             <tr>
-                <td><code>get_validpgpkeys()</code></td>
+                <td><span class="code">get_validpgpkeys()</span></td>
                 <td>Lista de las llaves PGP válidas.</td>
             </tr>
             <tr>
-                <td><code>get_conflicts()</code></td>
+                <td><span class="code">get_conflicts()</span></td>
                 <td>Lista de paquetes en conflicto.</td>
             </tr>
             <tr>
-                <td><code>get_provides()</code></td>
+                <td><span class="code">get_provides()</span></td>
                 <td>Lista de paquetes proporcionados.</td>
             </tr>
             <tr>
-                <td><code>get_replaces()</code></td>
+                <td><span class="code">get_replaces()</span></td>
                 <td>Lista de paquetes que reemplaza.</td>
             </tr>
             <tr>
-                <td><code>get_pkgbase()</code></td>
-                <td>Paquete base (<code>pkgbase</code>) como una lista.</td>
+                <td><span class="code">get_pkgbase()</span></td>
+                <td>Paquete base (<span class="code">pkgbase</span>) como una lista.</td>
+            </tr>
+            <tr>
+                <td><span class="code">get_changelog()</span></td>
+                <td>Nombre del archivo del changelog como string.</td>
+            </tr>
+            <tr>
+                <td><span class="code">get_groups()</span></td>
+                <td>Lista de los grupos del paquete.</td>
+            </tr>
+            <tr>
+                <td><span class="code">get_backup()</span></td>
+                <td>Lista de los archivos de respaldo.</td>
+            </tr>
+            <tr>
+                <td><span class="code">get_noextract()</span></td>
+                <td>Lista de archivos a excluir de la extracción.</td>
             </tr>
         </tbody>
     </table>
-    <h2>Funciones principales para el usuario (Clase InfoDict)</h2>
     <p>
-        <strong>Nota:</strong> Las funciones internas (<code>get_base</code>, <code>multiline</code>,
-        <code>replacevar</code>, <code>processvar</code> y <code>remove_quotes</code>) están pensadas para uso del
+        <strong>Nota:</strong> Las funciones internas (<span class="code">get_base</span>, <span
+            class="code">multiline</span>,
+        <span class="code">replacevar</span>, <span class="code">processvar</span> y <span
+            class="code">remove_quotes</span>) están pensadas para uso del
         módulo y <strong>no necesitan ser usadas por el usuario</strong>, excepto cuando desees crear funciones que no
         están en el parser.
     </p>
+    <h2>Funciones principales para el usuario (Clase InfoDict)</h2>
     <p>
-        Además, puedes usar la clase <code>InfoDict</code> para crear diccionarios a partir de información seleccionada,
-        <code>InfoDict</code> tiene estos métodos:
+        Además, puedes usar la clase <span class="code">InfoDict</span> para crear diccionarios a partir de información
+        seleccionada,
+        <span class="code">InfoDict</span> tiene estos métodos:
     </p>
     <table>
         <thead>
@@ -180,15 +202,15 @@ infodict = InfoDict(PARSER (Parser; Sin valor por defecto)
         </thead>
         <tbody>
             <tr>
-                <td><code>get_dict()</code></td>
+                <td><span class="code">get_dict()</span></td>
                 <td>Diccionario que contiene la información solicitada por el usuario.</td>
             </tr>
             <tr>
-                <td><code>to_json()</code></td>
+                <td><span class="code">to_json()</span></td>
                 <td>Convierte el diccionario a formato JSON.</td>
             </tr>
             <tr>
-                <td><code>write_json(json_name)</code></td>
+                <td><span class="code">write_json(json_name)</span></td>
                 <td>Escribe un archivo con el nombre proporcionado que contiene la información del diccionario en
                     formato JSON.</td>
             </tr>
@@ -198,22 +220,25 @@ infodict = InfoDict(PARSER (Parser; Sin valor por defecto)
     <h2>Instalación y uso</h2>
     <h3>Opción 1: AUR</h3>
     <p>
-        El módulo está disponible en el AUR como <strong><code>python-pkgbuild-parser</code></strong>.
+        El módulo está disponible en el AUR como <strong><span class="code">python-pkgbuild-parser</span></strong>.
     </p>
     <h3>Opción 2: PyPi</h3>
     <pre><code>pip install pkgbuild-parser</code></pre>
     <h2>Uso básico</h2>
-    <p><a href="https://github.com/KevinCrrl/pkgbuild_parser/blob/main/example.py">Ejemplo en GitHub</a></p>
-    <p><a href="https://codeberg.org/KevinCrrl/pkgbuild_parser/src/branch/main/example.py">Ejemplo en Codeberg</a></p>
+    <p><a href="https://github.com/KevinCrrl/pkgbuild_parser/blob/main/example.py">Ejemplo en GitHub</a>
+        <a href="https://codeberg.org/KevinCrrl/pkgbuild_parser/src/branch/main/example.py">Ejemplo en Codeberg</a>
+    </p>
     <h2>Manejo de errores</h2>
     <p>
-        Si el archivo PKGBUILD no existe, se lanza un <code>ParserFileError</code>, que debe ser capturado para evitar
+        Si el archivo PKGBUILD no existe, se lanza un <span class="code">ParserFileError</span>, que debe ser capturado
+        para evitar
         que el programa falle.
     </p>
     <p>
-        También puede ocurrir que se lanza un <code>ParserKeyError</code> en caso de que la obtención de un valor del
+        También puede ocurrir que se lanza un <span class="code">ParserKeyError</span> en caso de que la obtención de un
+        valor del
         PKGBUILD falle, por ejemplo, si la licencia no está declarada correctamente, y se llama a
-        <code>get_license()</code> se producirá dicha excepción.
+        <span class="code">get_license()</span> se producirá dicha excepción.
     </p>
     <h2>Limitaciones y notas adicionales</h2>
     <ul>
@@ -222,15 +247,18 @@ infodict = InfoDict(PARSER (Parser; Sin valor por defecto)
             "${url}/package-$pkgver.tar.gz", pkgbuild-parser podrá reconocer estas variables, recuperarlas y
             reemplazarlas por sus valores.</li>
         <li>El objetivo del módulo es extraer únicamente <strong>información básica</strong> de PKGBUILD estándar. No
-            puede reemplazar variables que no reconozca, como "$mi_variable_personal", o variaciones de variables
-            conocidas, como "$pkgname%sufijo".</li>
-        <li>Funciona mejor con PKGBUILD que siguen las normas de la <strong>Arch Wiki</strong>.</li>
+            puede reemplazar variables que no reconozca, como variaciones de variables conocidas, como
+            "$pkgname%suffix".</li>
+        <li>Funciona mejor con PKGBUILDs que siguen las normas de la <strong>Arch Wiki</strong>.</li>
         <li>Este código no implementa un parser real en sí, sino que se limita a leer el archivo PKGBUILD y extraer la
             información necesaria mediante varias condiciones y lógica de estados, sin embargo, intento que sea lo más
             preciso posible :)</li>
-        <li>Desde la versión 0.4.0, el módulo puede extraer información de arrays o listas, como <code>depends</code>,
-            <code>makedepends</code>, <code>source</code>, <code>optdepends</code>, <code>license</code>,
-            <code>options</code> y <code>checkdepends</code>.</li>
+        <li>Desde la versión 0.4.0, el módulo puede extraer información de arrays o listas, como <span
+                class="code">depends</span>,
+            <span class="code">makedepends</span>, <span class="code">source</span>, <span
+                class="code">optdepends</span>, <span class="code">license</span>,
+            <span class="code">options</span> y <span class="code">checkdepends</span>.
+        </li>
         <li>Desde la versión 1.0.0 las funciones que retornan un string ya no incluyen las comillas por defecto.</li>
     </ul>
     <br>

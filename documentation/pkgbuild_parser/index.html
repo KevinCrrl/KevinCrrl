@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <title>Pkgbuild Parser</title>
     <link rel="stylesheet" href="/KevinCrrl/static/css/styles.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.12.0/styles/tokyo-night-dark.min.css">
     <script src="/KevinCrrl/static/js/lang.js"></script>
+    <script src="/KevinCrrl/static/js/highlight/highlight11.js"></script>
+    <script>hljs.highlightAll();</script>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
 </head>
 
@@ -25,7 +29,7 @@
 <h2>Contributing to PKGBUILD Parser</h2>
 <p>See the <a href="https://github.com/KevinCrrl/pkgbuild_parser/blob/main/CONTRIBUTING.md">CONTRIBUTING</a> file.</p>
 <h2>Classes and usage</h2>
-<pre><code class="language-python">from pkgbuild_parser import Parser, InfoDict
+<pre><code class="python">from pkgbuild_parser import Parser, InfoDict
 
 parser = Parser(&lt;FILENAME&gt; (String; Default value: &quot;PKGBUILD&quot;)
                 &lt;ENABLE_CACHE&gt; (Boolean; Default value: True)
@@ -59,112 +63,112 @@ infodict = InfoDict(&lt;PARSER&gt; (Parser; Not default value)
 </thead>
 <tbody>
 <tr>
-<td><code>get_pkgname()</code></td>
-<td>Package name (<code>pkgname</code>) as a string.</td>
+<td><span class="code">get_pkgname()</span></td>
+<td>Package name (<span class="code">pkgname</span>) as a string.</td>
 </tr>
 <tr>
-<td><code>get_pkgver()</code></td>
-<td>Package version (<code>pkgver</code>) as a string.</td>
+<td><span class="code">get_pkgver()</span></td>
+<td>Package version (<span class="code">pkgver</span>) as a string.</td>
 </tr>
 <tr>
-<td><code>get_pkgrel()</code></td>
-<td>Release number (<code>pkgrel</code>) as a string.</td>
+<td><span class="code">get_pkgrel()</span></td>
+<td>Release number (<span class="code">pkgrel</span>) as a string.</td>
 </tr>
 <tr>
-<td><code>get_pkgdesc()</code></td>
-<td>Package description (<code>pkgdesc</code>) as a string.</td>
+<td><span class="code">get_pkgdesc()</span></td>
+<td>Package description (<span class="code">pkgdesc</span>) as a string.</td>
 </tr>
 <tr>
-<td><code>get_arch()</code></td>
-<td>Package architecture (<code>arch</code>) as a list of strings.</td>
+<td><span class="code">get_arch()</span></td>
+<td>Package architecture (<span class="code">arch</span>) as a list of strings.</td>
 </tr>
 <tr>
-<td><code>get_url()</code></td>
-<td>Main project URL (<code>url</code>) as a string.</td>
+<td><span class="code">get_url()</span></td>
+<td>Main project URL (<span class="code">url</span>) as a string.</td>
 </tr>
 <tr>
-<td><code>get_license()</code></td>
-<td>Package license (<code>license</code>) as a list of strings.</td>
+<td><span class="code">get_license()</span></td>
+<td>Package license (<span class="code">license</span>) as a list of strings.</td>
 </tr>
 <tr>
-<td><code>get_source()</code></td>
-<td>Package source(s) (<code>source</code>) as a list of strings.</td>
+<td><span class="code">get_source()</span></td>
+<td>Package source(s) (<span class="code">source</span>) as a list of strings.</td>
 </tr>
 <tr>
-<td><code>get_epoch()</code></td>
-<td>Package <code>epoch</code>.</td>
+<td><span class="code">get_epoch()</span></td>
+<td>Package <span class="code">epoch</span>.</td>
 </tr>
 <tr>
-<td><code>get_install()</code></td>
+<td><span class="code">get_install()</span></td>
 <td>Install script name</td>
 </tr>
 <tr>
-<td><code>get_full_package_name()</code></td>
-<td>Full package name, including <code>epoch</code>, version, and <code>pkgrel</code>.</td>
+<td><span class="code">get_full_package_name()</span></td>
+<td>Full package name, including <span class="code">epoch</span>, version, and <span class="code">pkgrel</span>.</td>
 </tr>
 <tr>
-<td><code>get_depends()</code></td>
+<td><span class="code">get_depends()</span></td>
 <td>List of the package's dependencies.</td>
 </tr>
 <tr>
-<td><code>get_makedepends()</code></td>
+<td><span class="code">get_makedepends()</span></td>
 <td>List of the package's build dependencies.</td>
 </tr>
 <tr>
-<td><code>get_optdepends()</code></td>
+<td><span class="code">get_optdepends()</span></td>
 <td>Dictionary of the package's optional dependencies.</td>
 </tr>
 <tr>
-<td><code>get_options()</code></td>
+<td><span class="code">get_options()</span></td>
 <td>List of the package's options.</td>
 </tr>
 <tr>
-<td><code>get_checkdepends()</code></td>
+<td><span class="code">get_checkdepends()</span></td>
 <td>List of the package's check dependencies.</td>
 </tr>
 <tr>
-<td><code>get_sums(algorithm)</code></td>
-<td>List of the <code>algorithm</code> checksums.</td>
+<td><span class="code">get_sums(algorithm)</span></td>
+<td>List of the <span class="code">algorithm</span> checksums.</td>
 </tr>
 <tr>
-<td><code>get_validpgpkeys()</code></td>
+<td><span class="code">get_validpgpkeys()</span></td>
 <td>List of the valid PGP keys.</td>
 </tr>
 <tr>
-<td><code>get_conflicts()</code></td>
+<td><span class="code">get_conflicts()</span></td>
 <td>List of conflicting packages.</td>
 </tr>
 <tr>
-<td><code>get_provides()</code></td>
+<td><span class="code">get_provides()</span></td>
 <td>List of packages provided.</td>
 </tr>
 <tr>
-<td><code>get_replaces()</code></td>
+<td><span class="code">get_replaces()</span></td>
 <td>List of packages it replaces.</td>
 </tr>
 <tr>
-<td><code>get_pkgbase()</code></td>
-<td>Base package (<code>pkgbase</code>) as a list.</td>
+<td><span class="code">get_pkgbase()</span></td>
+<td>Base package (<span class="code">pkgbase</span>) as a list.</td>
 </tr>
 <tr>
-<td><code>get_changelog()</code></td>
+<td><span class="code">get_changelog()</span></td>
 <td>Changelog filename as a string.</td>
 </tr>
 <tr>
-<td><code>get_groups()</code></td>
+<td><span class="code">get_groups()</span></td>
 <td>List of the package groups.</td>
 </tr>
 <tr>
-<td><code>get_backup()</code></td>
+<td><span class="code">get_backup()</span></td>
 <td>List of the backup files.</td>
 </tr>
 <tr>
-<td><code>get_noextract()</code></td>
+<td><span class="code">get_noextract()</span></td>
 <td>List of files to exclude from the extraction.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Note:</strong> The internal functions (<code>get_base</code>, <code>multiline</code>, <code>replacevar</code>, <code>processvar</code> and <code>remove_quotes</code>) are intended for module use and <strong>do not need to be used by the user</strong>, except when you want to create functions that are not in the parser.</p>
+<p><strong>Note:</strong> The internal functions (<span class="code">get_base</span>, <span class="code">multiline</span>, <span class="code">replacevar</span>, <span class="code">processvar</span> and <span class="code">remove_quotes</span>) are intended for module use and <strong>do not need to be used by the user</strong>, except when you want to create functions that are not in the parser.</p>
 <h2>Main functions for the user (InfoDict class)</h2>
 <p>Also, you can use the InfoDict class to create dictionariess from selected information, InfoDict has this methods:</p>
 <table>
@@ -176,15 +180,15 @@ infodict = InfoDict(&lt;PARSER&gt; (Parser; Not default value)
 </thead>
 <tbody>
 <tr>
-<td><code>get_dict()</code></td>
+<td><span class="code">get_dict()</span></td>
 <td>dictionary that contains the information requested by the user.</td>
 </tr>
 <tr>
-<td><code>to_json()</code></td>
+<td><span class="code">to_json()</span></td>
 <td>Converts the dictionary to a JSON format.</td>
 </tr>
 <tr>
-<td><code>write_json(json_name)</code></td>
+<td><span class="code">write_json(json_name)</span></td>
 <td>Writes a file with the provided name that contains the dictionary information in JSON format.</td>
 </tr>
 </tbody>
@@ -192,7 +196,7 @@ infodict = InfoDict(&lt;PARSER&gt; (Parser; Not default value)
 <hr />
 <h2>Installation and use</h2>
 <h3>Option 1: AUR</h3>
-<p>The module is available on the AUR as <strong><code>python-pkgbuild-parser</code></strong>.</p>
+<p>The module is available on the AUR as <strong><span class="code">python-pkgbuild-parser</span></strong>.</p>
 <h3>Option 2: PyPi</h3>
 <pre><code>pip install pkgbuild-parser
 </code></pre>
@@ -200,15 +204,15 @@ infodict = InfoDict(&lt;PARSER&gt; (Parser; Not default value)
 <p><a href="https://github.com/KevinCrrl/pkgbuild_parser/blob/main/example.py">GitHub example</a>
 <a href="https://codeberg.org/KevinCrrl/pkgbuild_parser/src/branch/main/example.py">Codeberg example</a></p>
 <h2>Error handling</h2>
-<p>If the PKGBUILD file does not exist, a <code>ParserFileError</code> is raised, which must be caught to prevent the program from failing.</p>
-<p>A <code>ParserKeyError</code> can also be raised if getting a value from the PKGBUILD fails, for example, if the license is not declared correctly, and <code>get_license()</code> is called, this exception will be raised.</p>
+<p>If the PKGBUILD file does not exist, a <span class="code">ParserFileError</span> is raised, which must be caught to prevent the program from failing.</p>
+<p>A <span class="code">ParserKeyError</span> can also be raised if getting a value from the PKGBUILD fails, for example, if the license is not declared correctly, and <span class="code">get_license()</span> is called, this exception will be raised.</p>
 <h2>Limitations and additional notes</h2>
 <ul>
 <li>Starting with version 1.2.0, the parser can replace known variables in a Bash string. For example, if you try to fetch a source file and it is declared in the PKGBUILD as "${url}/package-$pkgver.tar.gz", pkgbuild-parser will be able to recognize these variables, retrieve them, and replace them with their values. </li>
 <li>The module's goal is to extract only <strong>basic information</strong> from standard PKGBUILDs, It cannot replace variables it does not recognize, such as variations of known variables, such as "$pkgname%suffix".</li>
 <li>It works best with PKGBUILDs that follow the <strong>Arch Wiki</strong> standards.</li>
 <li>This code doesn't implement a proper parser; it simply reads the PKGBUILD file and extracts the necessary information using various conditions and state logic. However, I try to make it as accurate as possible :)</li>
-<li>Since version 0.4.0, the module can extract information from arrays or lists, such as <code>depends</code>, <code>makedepends</code>, <code>source</code>, <code>optdepends</code>, <code>license</code>, <code>options</code>, and <code>checkdepends</code>.</li>
+<li>Since version 0.4.0, the module can extract information from arrays or lists, such as <span class="code">depends</span>, <span class="code">makedepends</span>, <span class="code">source</span>, <span class="code">optdepends</span>, <span class="code">license</span>, <span class="code">options</span>, and <span class="code">checkdepends</span>.</li>
 <li>Since version 1.0.0, functions that return a string no longer include quotes by default.</li>
 </ul>
 <a href="/KevinCrrl/index.html">Back to homepage</a>
