@@ -23,3 +23,9 @@
 ## Activity by day
 
 ![Activity Graph](https://github.com/KevinCrrl/KevinCrrl/raw/refs/heads/main/profile/activity-graph.svg)
+
+# License
+
+- My website includes a copy of [highlight.js](https://github.com/highlightjs/highlight.js), which is licensed under the BSD-3-Clause License. You can find a copy of its license in [this directory](static/js/highlight/LICENSE).
+
+- All other scripts (`*.js`, `*.py`) in this repository written by me are licensed under the Apache-2.0 License.
