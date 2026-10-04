@@ -16,7 +16,7 @@
     <header><b>KevinCrrl Python AUR Helper: Creado para automatizar de manera segura.</b></header>
     <h1>KPA: Documentación</h1>
     <div class="aviso">KPA es un proyecto independiente usado en sistemas Arch Linux y derivados, sin embargo, ni KPA ni
-        su creador tienen relaciones con Arch Linux ni con su nombre oficial.</div>
+        su creador tienen relación con Arch Linux ni con su nombre oficial.</div>
     <p>
         Este es un proyecto que busca la seguridad y el minimalismo para automatizar la clonación de PKGBUILD y
         construcción a partir de ellos usando el AUR (Arch User Repository),
@@ -35,45 +35,34 @@
             href="https://github.com/KevinCrrl/kpa/releases">releases</a>)
         y se puede automatizar la instalación vía <a href="https://aur.archlinux.org/packages/kpa">kpa en AUR</a> (el
         paquete kpa-bin ya no será mantenido oficialmente y solicité su eliminación del AUR).</p>
-    <br>
     <p>
         Por cierto, esta documentación corresponde a la versión 3.0.0 de KPA y superiores que puedan existir.
     </p>
     <h2>Diferencias de este AUR helper</h2>
-    <p>
-        kpa automatiza las herramientas propias de Arch, el entorno Linux y el control de versiones a diferencia de
+    <p>kpa automatiza las herramientas propias de Arch, el entorno Linux y el control de versiones a diferencia de
         otros AUR Helper que se limitan a sus propias implementaciones y/o reemplazan programas y no ofrecen una mejor
-        transparencia del proceso o un proceso de configuración para usar herramientas diferentes.
-        <br>
-        - Tiene varios comandos simples:
-        <br>
-        Ins: Instalar
-        <br>
-        Act: Actualizar
-        <br>
-        Des: Desinstalar
-        <br>
-        Limp: Limpiar el sistema
-        <br>
-        Conf: Configurar KPA mediante CLI y escribir esa configuración al archivo kpa.json
-        <br>
-        <br>
-        De estos comandos Ins y Act se pueden usar con --verbose para ver las salidas de Git (Solo a partir de la
-        versión 2.2.0).
-        <br>
-        A partir de la versión 3.0.0, Ins y Act tienen múltiples banderas, para consultarlas y ver que hace cada una,
-        use:
-    <pre>
-            <code class="bash">kpa Ins --help
+        transparencia del proceso o un proceso de configuración para usar herramientas diferentes.</p>
+    <p>- Tiene varios comandos simples:</p>
+    <ul>
+        <li>Ins: Instalar</li>
+        <li>Act: Actualizar</li>
+        <li>Des: Desinstalar</li>
+        <li>Limp: Limpiar el sistema</li>
+        <li>Conf: Configurar KPA mediante CLI y escribir esa configuración al archivo kpa.json</li>
+        <li>De estos comandos Ins y Act se pueden usar con --verbose para ver las salidas de Git (Solo a partir de la
+        </li>
+        <li>versión 2.2.0).</li>
+    </ul>
+    <p>A partir de la versión 3.0.0, Ins y Act tienen múltiples banderas, para consultarlas y ver que hace cada una,
+        use:</p>
+    <pre><code class="bash">kpa Ins --help
 # y/o
 kpa Act --help
 
 # A partir de la versión 3.2.0, Conf también tiene opciones propias:
-kpa Conf --help</code>
-        </pre>
-    </p>
+kpa Conf --help</code></pre>
+    <p>Puede ejecutar kpa --help para obtener más información de los comandos principales.</p>
     <p>
-        Puede ejecutar kpa --help para obtener más información de los comandos principales.
         <br>
         - Confirmación del usuario: Antes de usar makepkg, se muestra el PKGBUILD para que se pueda leer y decidir
         dentro de la interfaz de consola del programa si quiere continuar o cancelar, además por defecto tiene un
@@ -111,11 +100,9 @@ kpa Conf --help</code>
         Permite limpiar el sistema de paquetes innecesarios, actualmente soporta la limpieza de paquetes huérfanos y
         caché de la carpeta de KPA.
     </p>
-    <pre>
-    <code class="bash">kpa Limp huerfanos
+    <pre><code class="bash">kpa Limp huerfanos
 # O
-kpa Limp cache</code>
-    </pre>
+kpa Limp cache</code></pre>
     <p>
         Al usar <span class="code">Limp huerfanos</span>, KPA buscará paquetes que fueron instalados como dependencias
         pero que ya no
@@ -173,10 +160,15 @@ kpa Limp cache</code>
     </ul>
     </p>
     <h3>Ejemplo</h3>
-    <div style="text-align: center;">
-        <img src="/KevinCrrl/static/assets/json.png" alt="Ejemplo de kpa.json">
-    </div>
-    <br>
+    <pre><code class="json">{
+    "root": "sudo",
+    "visor": "kpa",
+    "visor_theme": "one-dark",
+    "eula_detector": true,
+    "ignorar": ["paquete1", "paquete2"],
+    "url": "https://aur.archlinux.org",
+    "clone_branch": false
+}</code></pre>
     <a href="/KevinCrrl/index.html">Volver a Inicio</a>
 </body>
 
