@@ -12,11 +12,11 @@
 
 <!--START_SECTION:activity-->
 
-1. ℹ️ Labeled issue [#12](https://github.com/KevinCrrl/evillimiter-ng/issues/12) in [KevinCrrl/evillimiter-ng](https://github.com/KevinCrrl/evillimiter-ng)
+1. 💪 Opened PR [#5151](https://github.com/BlackArch/blackarch/pull/5151) in [BlackArch/blackarch](https://github.com/BlackArch/blackarch)
 2. ℹ️ Labeled issue [#12](https://github.com/KevinCrrl/evillimiter-ng/issues/12) in [KevinCrrl/evillimiter-ng](https://github.com/KevinCrrl/evillimiter-ng)
 3. ℹ️ Labeled issue [#12](https://github.com/KevinCrrl/evillimiter-ng/issues/12) in [KevinCrrl/evillimiter-ng](https://github.com/KevinCrrl/evillimiter-ng)
-4. ❗ Opened issue [#12](https://github.com/KevinCrrl/evillimiter-ng/issues/12) in [KevinCrrl/evillimiter-ng](https://github.com/KevinCrrl/evillimiter-ng)
-5. 🚀 Published release [V3.2.3](https://github.com/KevinCrrl/kpa/releases/tag/3.2.3) in [KevinCrrl/kpa](https://github.com/KevinCrrl/kpa)
+4. ℹ️ Labeled issue [#12](https://github.com/KevinCrrl/evillimiter-ng/issues/12) in [KevinCrrl/evillimiter-ng](https://github.com/KevinCrrl/evillimiter-ng)
+5. ❗ Opened issue [#12](https://github.com/KevinCrrl/evillimiter-ng/issues/12) in [KevinCrrl/evillimiter-ng](https://github.com/KevinCrrl/evillimiter-ng)
 
 <!--END_SECTION:activity-->
 
